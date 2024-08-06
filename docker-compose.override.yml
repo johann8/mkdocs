@@ -1,0 +1,24 @@
+services:
+
+  nginx-mkdocs:
+    labels:
+      - "traefik.enable=true"
+      ### ==== to https ====
+      - "traefik.http.routers.nginx-mkdocs-secure.entrypoints=websecure"
+      - "traefik.http.routers.nginx-mkdocs-secure.rule=Host(`${HOSTNAME0}.${DOMAINNAME}`)"
+      - "traefik.http.routers.nginx-mkdocs-secure.tls=true"
+      #- "traefik.http.routers.nginx-mkdocs-secure.tls.certresolver=production"                      # für eigene Zertifikate
+      #- "traefik.http.routers.nginx-mkdocs-secure.tls.domains[0].main=${HOSTNAME0}.${DOMAINNAME}"   # Für Letsencrypt: Set main domain
+      ### ==== to service ====
+      - "traefik.http.routers.nginx-mkdocs-secure.service=nginx-mkdocs"
+      - "traefik.http.services.nginx-mkdocs.loadbalancer.server.port=${PORT0}"
+      - "traefik.docker.network=proxy"
+      ### ==== redirect to authelia for secure login ====
+      - "traefik.http.routers.nginx-mkdocs-secure.middlewares=rate-limit@file,secHeaders@file"
+      #- "traefik.http.routers.nginx-mkdocs-secure.middlewares=authelia@docker,rate-limit@file,secHeaders@file"
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true

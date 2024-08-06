@@ -1,0 +1,192 @@
+# Project information
+site_name: HITC Docs
+site_url: https://docs.int.wassermanngruppe.de/
+site_author: Johann Hahn
+site_description: >-
+  Write your documentation in Markdown and create a professional static site in
+  minutes – searchable, customizable, in 60+ languages, for all devices
+
+# Repository
+repo_name: johann8/meshcentral
+repo_url: https://github.com/johann8/meshcentral
+
+# Copyright
+copyright: >
+  Copyright &copy; 2023 - 2024 Wassermann Gruppe -
+  <a href="#__consent"> Change cookie settings</a>
+
+# Page tree
+nav:
+  - 'Home': 'index.md'
+  - 'Tutorials':
+    - 'Docker': 
+      - tutorials/docker/index.md
+      - 'Docker Install': 'tutorials/docker/dockerinstall/index.md'
+      - 'Traefik RP': 'tutorials/docker/traefik/index.md'
+      - 'Authelia': 'tutorials/docker/authelia/index.md'
+      - 'Bacula': 'tutorials/docker/bacula/index.md'
+      - 'GLPI': 'tutorials/docker/glpi/index.md'
+      - 'OCS Inventory': 'tutorials/docker/ocsinventory/index.md'
+      - 'MeshCentral': 'tutorials/docker/meshcentral/index.md'
+      - 'MkDocs': 'tutorials/docker/mkdocs/index.md'
+      - 'MariaDB': 'tutorials/docker/mariadb/index.md'
+      - 'OpenLDAP': 'tutorials/docker/openldap/index.md'
+  - 'Linux':
+    - 'Tipps und Tricks': 'linux/tipps-und-tricks.md'      
+    - 'Änderung des Partitionslayouts': 'linux/change-partition-layout_lvm.md'
+  - 'Windows':
+    - 'Tipps und Tricks': 'windows/tipps-und-tricks.md'
+  - plugins/privacy.md
+  - 'About': 'about.md'
+
+# Configuration
+theme:
+  name: 'material'
+  language: de
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    #- header.autohide
+    - navigation.top
+    - navigation.tabs
+    #- navigation.instant
+    #- navigation.instant.prefetch
+    #- navigation.instant.progress
+    #- navigation.expand
+    #- navigation.footer
+    - navigation.indexes
+    #- navigation.prune
+    #- navigation.sections
+    #- navigation.tabs.sticky
+    #- navigation.path
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    #- toc.follow
+    - toc.integrate
+
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      scheme: default
+      #primary: indigo
+      #accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    # Dark mode 
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      #primary: indigo
+      #accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+#  favicon: assets/favicon.png
+  icon:
+    logo: logo
+
+# Plugins
+plugins:
+  #- blog
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+  #- awesome-pages                # Default: Is not installed
+  - tags:
+      tags_file: tags.md
+  #- meta-descriptions            # Default: Is not installed
+  #- external-markdown            # Default: Is not installed
+  #- progress                     # Default: Is not installed
+  #- git-revision-date-localized: # Default: Is not installed
+  #    type: timeago
+  #    enable_creation_date: true
+  - social                        # Default: Is not installed
+  #- git-authors:                  # Default: Is not installed
+  #    sort_authors_by: contribution
+  #    show_email_address: false
+  #    show_contribution: true
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      anchorlink: true
+      #permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Some minor style adjustments
+extra_css:
+  - assets/css/customizations.css
+
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://wassermanngruppe.de/
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/johann8?tab=repositories
+  consent:
+    actions:
+      - accept
+      - reject
+      #- manage    
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.

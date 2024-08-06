@@ -1,0 +1,55 @@
+networks:
+  mkdocsNet:
+    ipam:
+      driver: default
+      config:
+        - subnet: ${IPV4_NETWORK:-172.26.27}.0/24
+        - subnet: ${IPV6_NETWORK:-fd4d:6169:6c63:6f27}::/64
+
+services:
+
+#
+### === NGINX Container ===
+#
+  nginx-mkdocs:
+    image: nginx:alpine
+    container_name: nginx-mkdocs
+    restart: on-failure:10
+    #mem_limit: 4G
+    #mem_reservation: 2G
+    security_opt:
+      - no-new-privileges=true
+    #ports:
+      #- "8005:80"
+    volumes:
+      - ./data/mkdocs/site:/var/www/html
+      - ./data/nginx/templates:/etc/nginx/templates
+    environment:
+      - TZ=${TZ}
+      - NGINX_HOST=localhost                # set your local domain or your live domain
+    networks:
+      mkdocsNet:
+       ipv4_address: ${IPV4_NETWORK:-}.5
+       ipv6_address: ${IPV6_NETWORK:-fd4d:6169:6c63:6f27}::5
+
+#
+### === MKDOCS Container ===
+#
+
+#  mkdocs:
+#    container_name: mkdocs
+#    hostname: mkdocs
+#    image: squidfunk/mkdocs-material:${MKDOCS_VERSION}
+#    restart: unless-stopped
+#    security_opt:
+#      - no-new-privileges=true
+#    #ports:
+#      #- "8005:8000"
+#    volumes:
+#      - ./data/mkdocs:/docs
+#    stdin_open: true
+#    tty: true
+#    environment:
+#      TZ: Europe/Berlin
+#    networks:
+#      - mkdocsNet
