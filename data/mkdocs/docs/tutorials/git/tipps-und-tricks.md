@@ -43,7 +43,7 @@ tags: [git, repo]
 
 ##### Git - Datei | Ordner innerhalb Repository verschieben
 
-!!! tip "**TIPP** :material-lightbulb-on:"
+!!! tip "**Tipp**   :material-lightbulb-on:"
 
     ```bash
     git mv folder/README.md ./
@@ -53,7 +53,7 @@ tags: [git, repo]
 
 ##### Git - Repo clonen, Änderungen herunterladen
 
-??? tip ":material-lightbulb-on: **Tipp:** Repo clonen, Änderungen herunterladen"
+??? tip "**Tipp:**   :material-lightbulb-on:"
 
     ```bash
     git clone https://github.com/johann8/mkdocs.git
