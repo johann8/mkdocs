@@ -14,7 +14,7 @@ tags: [git, repo]
 
 !!! tip ""
 
-:material-lightbulb-on: **Note:** Datei | Ordner zu Repository hinzufügen
+    :material-lightbulb-on: **Note:** Datei | Ordner zu Repository hinzufügen
 
     ```bash
 
