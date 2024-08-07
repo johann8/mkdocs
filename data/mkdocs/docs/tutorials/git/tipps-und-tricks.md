@@ -14,10 +14,10 @@ tags: [git, repo]
 
     [Git]: https://github.com/
 
-#### `Git` - Datei | Ordner zu Repository hinzufügen
+##### `Git` - Datei | Ordner zu Repository hinzufügen
 
 
-??? tip ""
+!!! tip ""
 
     :material-lightbulb-on: **Tipp:** Datei | Ordner zu Repository hinzufügen
 
@@ -28,9 +28,9 @@ tags: [git, repo]
     git push -u origin master
     ```
 
-#### Git - Datei | Ordner von  Repository entfernen
+##### Git - Datei | Ordner von  Repository entfernen
 
-??? tip ""
+!!! tip ""
 
     :material-lightbulb-on: **Tipp:** Datei | Ordner von  Repository entfernen
 
