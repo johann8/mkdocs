@@ -43,12 +43,14 @@ tags: [git, repo]
 
 #### Git - Datei | Ordner innerhalb Repository verschieben
 
-??? tip ""
+??? tip ":material-lightbulb-on: Tipp"
 
-    :material-lightbulb-on: **Tipp:** Datei | Ordner zu Repository hinzufügen
+    :material-lightbulb-on: **Tipp:** Datei | Ordner innerhalb Repository verschieben
 
     ```bash
-
+    git mv folder/README.md ./
+    git mv data/folder1/folder2 data/
+    git commit -m 'moved folder "linux"'
     ```
 
 #### Git - Repo clonen, Änderungen herunterladen
