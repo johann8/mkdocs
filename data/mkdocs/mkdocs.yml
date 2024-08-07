@@ -33,11 +33,11 @@ nav:
       - 'OpenLDAP': 'tutorials/docker/openldap/index.md'
     - 'Git':
       - 'Git repo anlegen': 'tutorials/git/git_repo_anlegen.md'
-  - 'Linux':
-    - 'Tipps und Tricks': 'linux/tipps-und-tricks.md'      
-    - 'Änderung des Partitionslayouts': 'linux/change-partition-layout_lvm.md'
-  - 'Windows':
-    - 'Tipps und Tricks': 'windows/tipps-und-tricks.md'
+    - 'Linux':
+      - 'Tipps und Tricks': 'linux/tipps-und-tricks.md'      
+      - 'Änderung des Partitionslayouts': 'linux/change-partition-layout_lvm.md'
+    - 'Windows':
+      - 'Tipps und Tricks': 'windows/tipps-und-tricks.md'
   - plugins/privacy.md
   - 'About': 'about.md'
 
