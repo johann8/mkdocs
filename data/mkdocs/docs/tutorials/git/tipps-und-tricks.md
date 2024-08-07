@@ -22,7 +22,10 @@ tags: [git, repo]
     :material-lightbulb-on: **Tipp:** Datei | Ordner zu Repository hinzufügen
 
     ```bash
-
+    git add README.md (folder/*)
+    git diff --staged
+    git commit -m "first commit"
+    git push -u origin master
     ```
 
 #### Git - Datei | Ordner von  Repository entfernen
@@ -32,7 +35,10 @@ tags: [git, repo]
     :material-lightbulb-on: **Tipp:** Datei | Ordner von  Repository entfernen
 
     ```bash
-
+    git rm filename
+    git rm -r  data/folder
+    git commit -m "Deleted the file from the git repository"
+    git push -u origin master
     ```
 
 #### Git - Datei | Ordner innerhalb Repository verschieben
