@@ -28,11 +28,9 @@ tags: [git, repo]
     git push -u origin master
     ```
 
-##### Git - Datei | Ordner von  Repository entfernen
+##### :material-lightbulb-on: **Tipp:** Datei | Ordner von  Repository entfernen
 
-!!! tip ""
-
-    :material-lightbulb-on: **Tipp:** Datei | Ordner von  Repository entfernen
+??? tip ""
 
     ```bash
     git rm filename
