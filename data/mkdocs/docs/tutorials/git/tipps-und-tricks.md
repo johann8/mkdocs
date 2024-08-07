@@ -41,18 +41,17 @@ tags: [git, repo]
     git push -u origin master
     ```
 
-#### Git - Datei | Ordner innerhalb Repository verschieben
+##### Git - Datei | Ordner innerhalb Repository verschieben
 
-!!! tip ""
+!!! tip "**TIPP** :material-lightbulb-on:"
 
-    :material-lightbulb-on: **TIPP** 
     ```bash
     git mv folder/README.md ./
     git mv data/folder1/folder2 data/
     git commit -m 'moved folder "linux"'
     ```
 
-#### Git - Repo clonen, Änderungen herunterladen
+##### Git - Repo clonen, Änderungen herunterladen
 
 ??? tip ":material-lightbulb-on: **Tipp:** Repo clonen, Änderungen herunterladen"
 
