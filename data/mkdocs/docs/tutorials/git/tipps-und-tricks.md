@@ -8,9 +8,14 @@ tags: [git, repo]
 
 # :material-github: `Git` Tipps und Tricks
 
-#### [`Git`][Git] - Datei | Ordner zu Repository hinzufügen
+!!! question "What is Git?"
 
-[Git]: https://github.com/
+    :material-git: [`Git`][Git][^1] ist eine freie Software zur verteilten Versionsverwaltung von Dateien.
+
+    [Git]: https://github.com/
+
+#### `Git` - Datei | Ordner zu Repository hinzufügen
+
 
 !!! tip ""
 
@@ -59,3 +64,5 @@ tags: [git, repo]
     ```bash
 
     ```
+
+[^1]: :material-wikipedia: [Wikipedia - Git](https://de.wikipedia.org/wiki/Git){target=\_blank}
