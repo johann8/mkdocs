@@ -19,7 +19,7 @@ tags: [git, repo]
 
 !!! tip ""
 
-    :material-lightbulb-on: **Tipp:** Datei | Ordner zu Repository hinzufügen
+    :material-lightbulb-on: **TIPP**
 
     ```bash
     git add README.md (folder/*)
@@ -28,9 +28,11 @@ tags: [git, repo]
     git push -u origin master
     ```
 
-##### :material-lightbulb-on: **Tipp:** Datei | Ordner von  Repository entfernen
+##### `Git` - Datei | Ordner von  Repository entfernen
 
-??? tip ""
+!!! tip ""
+
+    :material-lightbulb-on: **TIPP**
 
     ```bash
     git rm filename
@@ -41,10 +43,9 @@ tags: [git, repo]
 
 #### Git - Datei | Ordner innerhalb Repository verschieben
 
-??? tip ":material-lightbulb-on: Tipp"
+!!! tip ""
 
-    :material-lightbulb-on: **Tipp:** Datei | Ordner innerhalb Repository verschieben
-
+    :material-lightbulb-on: **TIPP** 
     ```bash
     git mv folder/README.md ./
     git mv data/folder1/folder2 data/
@@ -53,12 +54,14 @@ tags: [git, repo]
 
 #### Git - Repo clonen, Änderungen herunterladen
 
-??? tip ""
-
-    :material-lightbulb-on: **Tipp:** Repo clonen, Änderungen herunterladen
+??? tip ":material-lightbulb-on: **Tipp:** Repo clonen, Änderungen herunterladen"
 
     ```bash
-
+    git clone https://github.com/johann8/mkdocs.git
+    git remote -v
+    git fetch origin
+    git pull origin
+    git status
     ```
 
 #### Git - 
