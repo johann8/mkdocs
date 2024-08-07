@@ -31,6 +31,8 @@ nav:
       - 'MkDocs': 'tutorials/docker/mkdocs/index.md'
       - 'MariaDB': 'tutorials/docker/mariadb/index.md'
       - 'OpenLDAP': 'tutorials/docker/openldap/index.md'
+    - 'Git'
+      - 'Git repo anlegen': 'tutorials/git/git_repo_anlegen.md'
   - 'Linux':
     - 'Tipps und Tricks': 'linux/tipps-und-tricks.md'      
     - 'Änderung des Partitionslayouts': 'linux/change-partition-layout_lvm.md'
