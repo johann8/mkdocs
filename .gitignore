@@ -5,4 +5,5 @@
 
 
 # MkDocs  APP
-
+data/mkdocs/site/*
+data/mkdocs/.cache/*
