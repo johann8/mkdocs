@@ -53,7 +53,7 @@ tags: [git, repo]
 
 ##### Git - Repo clonen, Änderungen herunterladen
 
-??? tip "&nbsp; &nbsp;**Tipp:** :material-lightbulb-on:"
+??? tip "&nbsp; &nbsp;:material-lightbulb-on: **Tipp**"
 
     ```bash
     git clone https://github.com/johann8/mkdocs.git
