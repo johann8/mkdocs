@@ -17,9 +17,9 @@ tags: [git, repo]
 #### `Git` - Datei | Ordner zu Repository hinzufügen
 
 
-!!! tip ""
+??? tip ""
 
-    :material-lightbulb-on: **Note:** Datei | Ordner zu Repository hinzufügen
+    :material-lightbulb-on: **Tipp:** Datei | Ordner zu Repository hinzufügen
 
     ```bash
 
@@ -27,7 +27,9 @@ tags: [git, repo]
 
 #### Git - Datei | Ordner von  Repository entfernen
 
-??? tip "Datei | Ordner von  Repository entfernen"
+??? tip ""
+
+    :material-lightbulb-on: **Tipp:** Datei | Ordner von  Repository entfernen
 
     ```bash
 
@@ -35,7 +37,9 @@ tags: [git, repo]
 
 #### Git - Datei | Ordner innerhalb Repository verschieben
 
-??? tip "Datei | Ordner zu Repository hinzufügen"
+??? tip ""
+
+    :material-lightbulb-on: **Tipp:** Datei | Ordner zu Repository hinzufügen
 
     ```bash
 
@@ -43,7 +47,9 @@ tags: [git, repo]
 
 #### Git - Repo clonen, Änderungen herunterladen
 
-??? tip "Repo clonen, Änderungen herunterladen"
+??? tip ""
+
+    :material-lightbulb-on: **Tipp:** Repo clonen, Änderungen herunterladen
 
     ```bash
 
@@ -51,7 +57,9 @@ tags: [git, repo]
 
 #### Git - 
 
-??? tip "Git"
+??? tip ""
+
+    :material-lightbulb-on: **Tipp:** Git -
 
     ```bash
 
@@ -59,7 +67,9 @@ tags: [git, repo]
 
 #### Git - 
 
-??? tip "Git"
+??? tip ""
+
+    :material-lightbulb-on: **Tipp:** Git -
 
     ```bash
 
