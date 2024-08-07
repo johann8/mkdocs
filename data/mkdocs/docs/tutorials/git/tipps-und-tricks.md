@@ -12,7 +12,9 @@ tags: [git, repo]
 
 [Git]: https://github.com/
 
-??? tip "Datei | Ordner zu Repository hinzufügen"
+!!! tip ""
+
+:material-lightbulb-on: **Note:** Datei | Ordner zu Repository hinzufügen
 
     ```bash
 
