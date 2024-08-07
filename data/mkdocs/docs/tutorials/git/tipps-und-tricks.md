@@ -43,7 +43,7 @@ tags: [git, repo]
 
 ##### Git - Datei | Ordner innerhalb Repository verschieben
 
-!!! tip "**Tipp**   :material-lightbulb-on:"
+!!! tip "**Tipp** &nbsp; &nbsp; :material-lightbulb-on:"
 
     ```bash
     git mv folder/README.md ./
