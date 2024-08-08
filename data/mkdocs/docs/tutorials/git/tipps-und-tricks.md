@@ -14,8 +14,24 @@ tags: [git, repo]
 
     [Git]: https://github.com/
 
-##### `Git` - Datei | Ordner zu Repository hinzufügen
+##### `Git` - Neue Repository erstellen
 
+!!! tip ""
+
+    :material-lightbulb-on: **TIPP**
+
+    ```bash
+    echo "# Tools" >> README.md
+    git init
+    git add README.md
+    git diff --staged
+    git commit -m "first commit"
+    git branch -M master
+    git push -u origin master
+    git config credential.helper store
+    ```
+
+##### `Git` - Datei | Ordner zu Repository hinzufügen
 
 !!! tip ""
 
@@ -26,6 +42,9 @@ tags: [git, repo]
     git diff --staged
     git commit -m "first commit"
     git push -u origin master
+
+    # Mit dem folgenden Befehl werden alle Änderungen in der Dateien in `commit` übernommen
+    git commit -s -a -m
     ```
 
 ##### `Git` - Datei | Ordner von  Repository entfernen
@@ -41,7 +60,7 @@ tags: [git, repo]
     git push -u origin master
     ```
 
-##### Git - Datei | Ordner innerhalb Repository verschieben
+##### `Git` - Datei | Ordner innerhalb Repository verschieben
 
 !!! tip ""
 
@@ -53,7 +72,7 @@ tags: [git, repo]
     git commit -m 'moved folder "linux"'
     ```
 
-##### Git - Repo clonen, Änderungen herunterladen
+##### `Git` - Repo clonen, Änderungen herunterladen
 
 !!! tip ""
 
@@ -67,24 +86,16 @@ tags: [git, repo]
     git status
     ```
 
-#### Git - 
+#####  `Git` - Ändern Remote Repository
 
 !!! tip ""
 
     :material-lightbulb-on: **TIPP**
 
     ```bash
-
+    git remote -v
+    git remote set-url origin https://github.com/johann8/tools1.git
+    git remote -v
+    git push -u origin master
     ```
-
-#### Git - 
-
-!!! tip ""
-
-    :material-lightbulb-on: **TIPP**
-
-    ```bash
-
-    ```
-
 [^1]: :material-wikipedia: [Wikipedia - Git](https://de.wikipedia.org/wiki/Git){target=\_blank}
