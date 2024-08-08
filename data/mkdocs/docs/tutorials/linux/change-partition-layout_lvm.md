@@ -383,6 +383,82 @@ Das Vorhaben ist das Partitionslayout so zu ändern, damit man mehr Flexibilitä
     ```bash
     reboot
     ```
+    #### Den Mail Server testen
+
+    Nach dem Reboot muss das neue Partitionslayout und die Funktion des Mails Servers getestet werden. Über irgendein E-Mailclint prüfen, ob allte E-Mails da sind.
+
+    ```bash
+    # Partitionslayout anzeigen lassen
+    lsblk
+    ---
+    NAME             MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+    sda                8:0    0   800G  0 disk
+    ├─sda1             8:1    0  1000M  0 part /boot
+    ├─sda2             8:2    0 102.6G  0 part /
+    └─sda3             8:3    0 696.5G  0 part
+      ├─rl_mx01-swap 253:0    0     4G  0 lvm  [SWAP]
+      ├─rl_mx01-opt  253:1    0    10G  0 lvm  /opt
+      └─rl_mx01-var  253:2    0   200G  0 lvm  /var
+    ---
+
+    # Belegung der Partitionen anzeigen lassen
+    df -hT
+    ---
+    Filesystem                     Type      Size  Used Avail Use% Mounted on
+    ...
+    /dev/sda2                      ext4      101G   42G   55G  43% /
+    /dev/sda1                      ext4      966M  662M  239M  74% /boot
+    /dev/mapper/rl_mx01-var        ext4      196G   78G  109G  42% /var
+    /dev/mapper/rl_mx01-opt        ext4      9.8G  361M  8.9G   4% /opt
+    ...
+    ---
+    ```
+
+    #### Prüfen, ob alle Docker Container laufen
+
+    === "docker compose (Plugin)"
+
+        ```bash
+        cd /opt/mailcow-dockerized
+        docker compose up -d
+
+        # Zeigt Status an
+        docker compose ps
+
+        # Zeigt Logdaten an
+        docker compose logs -f
+        ```
+
+    === "docker-compose (Standalone)"
+
+        ```bash
+        cd /opt/mailcow-dockerized
+        docker-compose up -d
+
+        # Zeigt Status an
+        docker-compose ps
+
+        # Zeigt Logdaten an
+        docker-compose logs -f
+        ```
+    ####  Mailversand testen
+
+    Über irgendeinen E-Mailclient E-Mails an verschiedene Empfänger senden und empfangen. Dabei muss man die Logs auf eventuellen Fehler überwwachen.
+
+    #### Aufräumen nach den Änderungen
+
+    ```bash
+    # Alte `var` und `opt` Verzeichnisse löschen 
+    df -hT
+    rm -rf /opt.old
+    rm -rf /var.old
+    df -hT
+    ```
+    #### # Partition `sda2` reduzieren
+    
+    Nach dem Entfernen der Verzeichnissen `var` und `opt` ist die Partition `sda2` sehr groß und man kann sie wieder mit `GParted_Live` um 50GB reduzieren und die  Partition `sda3` um diese 50GB vergrösern. Dazu muss man wieder über VNC Console von `Gparted Live` starten  und die besagten Änderungen vornehmen.
+
+
 [^1]: [Contabo](https://contabo.com/de/){target=\_blank} 
 [^2]: [GParted Live - Grub](https://gparted.org/livehd.php#live-hd-grub){target=\_blank}
 [^3]: [Wikipedia - Grub](https://de.wikipedia.org/wiki/Grand_Unified_Bootloader){target=\_blank}
