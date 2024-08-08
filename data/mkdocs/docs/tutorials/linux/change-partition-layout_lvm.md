@@ -385,7 +385,7 @@ Das Vorhaben ist das Partitionslayout so zu ändern, damit man mehr Flexibilitä
     ```
     #### Den Mail Server testen
 
-    Nach dem Reboot muss das neue Partitionslayout und die Funktion des Mails Servers getestet werden. Über irgendein E-Mailclint prüfen, ob allte E-Mails da sind.
+    Nach dem Reboot mussen das neue Partitionslayout und die Funktion des Mails Servers getestet werden. Über irgendein E-Mail Client prüfen, ob alte E-Mails da sind.
 
     ```bash
     # Partitionslayout anzeigen lassen
@@ -443,7 +443,7 @@ Das Vorhaben ist das Partitionslayout so zu ändern, damit man mehr Flexibilitä
         ```
     ####  Mailversand testen
 
-    Über irgendeinen E-Mailclient E-Mails an verschiedene Empfänger senden und empfangen. Dabei muss man die Logs auf eventuellen Fehler überwwachen.
+    Über irgendeinen E-Mail Client E-Mails an verschiedene Empfänger senden und empfangen. Dabei muss man die Logs auf eventuellen Fehler überwachen.
 
     #### Aufräumen nach den Änderungen
 
@@ -454,7 +454,7 @@ Das Vorhaben ist das Partitionslayout so zu ändern, damit man mehr Flexibilitä
     rm -rf /var.old
     df -hT
     ```
-    #### # Partition `sda2` reduzieren
+    #### Partition `sda2` reduzieren, Partition `sda3` vergrössern 
     
     Nach dem Entfernen der Verzeichnissen `var` und `opt` ist die Partition `sda2` sehr groß und man kann sie wieder mit `GParted_Live` um 50GB reduzieren und die  Partition `sda3` um diese 50GB vergrösern. Dazu muss man wieder über VNC Console von `Gparted Live` starten  und die besagten Änderungen vornehmen.
 
