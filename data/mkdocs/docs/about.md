@@ -362,6 +362,15 @@ The original [pvekclean github page][pvekclean-url]{target=\_blank}
 
 <p style="color:red; text-align:center">Make this text blue.</p>
 
+---
+
+##### How to add multiple spaces between texts in Markdown
+
+I have a long space before &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;me.
+
+And finally one more thing, there are other codes like &ensp;(2 x &nbsp;) and &emsp;(4 x &nbsp;).
+
+I have a long space before &emsp;me.
 
 ---
 Enoj
