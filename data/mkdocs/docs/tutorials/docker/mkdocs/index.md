@@ -3,7 +3,10 @@ Title: MkDocs
 Summary: A brief description of mkdocs.
 Authors: Johann Hahn
 Date:    Juli 09, 2024
+tags: [Docker, mkdocs, docs]
 ---
+
+# MkDocs
 
 !!! question "📖 What is Material for MkDocs?"
 
