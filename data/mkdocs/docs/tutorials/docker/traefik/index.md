@@ -3,6 +3,7 @@ Title: Traefik
 Summary: Traefik Reverse Proxy 
 Authors: Johann Hahn
 Date:    Juli 09, 2024
+tags: [Docker, traefik]
 ---
 
 # :simple-traefikproxy: Traefik Reverse Proxy 
