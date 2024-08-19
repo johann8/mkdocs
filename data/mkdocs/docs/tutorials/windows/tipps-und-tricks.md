@@ -83,4 +83,27 @@ tags: [windows, tipps, tricks]
     # überprüfen Sie den Status
     reagentc /info
     ```
+
+??? tip "Windows 11 - Altes Kontextmenü wiederherstellen"
+
+    #### 
+
+    - Suchen -> regedit eingeben und `Registrierungs-Editor` starten
+    - `HKEY_USERS` ausklappen und auf User `SID` mit rechter Maustaste klicken und `umbenennen` wählen
+    - Mit `Strg` + `C` den Wert kopieren z.B. `S-1-5-21-2986536721-483922400-4177506015-1001`
+    - Editor öffnen und den Wert einfügen
+    - Die `Befehlszeile` `unten` kopieren und in die neue Zeile in Editor einfügen
+
+    ```
+    reg.exe add "HKEY_USERS\S-1-5-21-3764594489-3024899086-447399387-1004_Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
+    ```
+
+    Die User `SID` in der `Befehlszeile` austauschen wie unten im Beispiel
+    ```
+    reg.exe add "HKEY_USERS\S-1-5-21-2986536721-483922400-4177506015-1001_Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve    
+    ```
+
+    - `CMD` als User starten und die angepasste `Befehlszeile` einfügen und mit `Enter-Taste` ausführen
+    - Nach dem Reboot steht das alte Kontextmenü bereit
+
 [^1]: [Wikipedia - Chocolatey](https://de.wikipedia.org/wiki/Chocolatey){target=\_blank}
