@@ -86,7 +86,7 @@ tags: [windows, tipps, tricks]
 
 ??? tip "Windows 11 - Altes Kontextmenü wiederherstellen"
 
-    #### 
+    Mit der Windows 11 hat man eine neue Ansicht vom Datei Explorer und auch ein neues Kontextmenü erhalten. Microsoft hat aber das alte Kontextmenü drin gelassen, sodass man auch dieses öffnen kann.
 
     - Suchen -> regedit eingeben und `Registrierungs-Editor` starten
     - `HKEY_USERS` ausklappen und auf User `SID` mit rechter Maustaste klicken und `umbenennen` wählen
