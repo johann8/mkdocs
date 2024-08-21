@@ -21,7 +21,7 @@ tags: [windows, tipps, tricks]
     @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
     ```
 
-    !!! tip "Terminal Programm `cmder` zu Indexierung einfügen."
+    !!! info "Terminal Programm `cmder` zu Indexierung einfügen."
         Starten Sie die Systemsteuerung und suchen Sie nach `Indizierungsoptionen`. Klicken Sie darauf und danach auf die Schaltfläche `Ändern`. Im Fenster navigieren Sie zum `C:\tools` und setzen Sie den Hacken ein. Danach klicken Sie auf `Schließen`. Nach etwas Zeit findet man `cmder` über Windows-Suche.    
 
     #### Windows Terminal `cmder` aus der Repository installieren
