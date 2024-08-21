@@ -7,12 +7,13 @@ Date:    August 21, 2024
 
 # IT Dokumentation von `Wassermann Gruppe`
 
-Herzlich Wilkommen bei [`Wassermann Gruppe`][Wassermann Gruppe]][^1]
-`Wassermann Gruppe` ist ein Fachunternehmen für die Ausführung von Hochspannungskabellegungen und Hochspannungsmontagen.
-Mehr Info kann man der [`Homepage`][Homepage] entnehmen.
+<h1 align="center">Herzlich Wilkommen bei Wassermann Gruppe</h1>
 
-[Wassermann Gruppe]: https://wassermanngruppe.de/{target=\_blank}
-[Homepage]: https://wassermanngruppe.de/{target=\_blank}
+[`Wassermann Gruppe`][Wassermann Gruppe][^1] ist ein Fachunternehmen für die Ausführung von Hochspannungskabellegungen und Hochspannungsmontagen.
+Mehr Info kann man der [`Homepage`][Homepage] von `WG` entnehmen.
+
+[Wassermann Gruppe]: https://wassermanngruppe.de/
+[Homepage]: https://wassermanngruppe.de/
 
 [^1]: [Homepage WG](https://wassermanngruppe.de/){target=\_blank}
 
