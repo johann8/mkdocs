@@ -37,6 +37,7 @@ nav:
     - 'Linux':
       - 'Tipps und Tricks': 'tutorials/linux/tipps-und-tricks.md'      
       - 'Änderung des Partitionslayouts': 'tutorials/linux/change-partition-layout_lvm.md'
+      - 'LVM Partition vergrößern': 'tutorials/linux/lvm-partition-vergroessern.md'
     - 'Windows':
       - 'Tipps und Tricks': 'tutorials/windows/tipps-und-tricks.md'
   - plugins/privacy.md
