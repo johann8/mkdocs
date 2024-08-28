@@ -59,7 +59,7 @@ pvmove -- 249 extents of physical volume "/dev/hdb" successfully moved
 
 ##### Entfernen der unbenutzter Festplatte
 
-Man kann nun die alte Festplatte aus der Volume Gruppe entfernen[^1].
+Man kann nun die alte Festplatte aus der Volume Gruppe entfernen[^2].
 
 ```bash
 vgreduce dev /dev/hdb
@@ -71,4 +71,5 @@ vgreduce -- /dev/hdb
 ```
 Die Festplatte kann nun entweder physisch entfernt werden, wenn der Server das nächste Mal ausgeschaltet wird, oder sie kann anderweitig eingesetzt werden.
 
-[^1]: [Add / Remove Disk to LVM](https://tldp.org/HOWTO/LVM-HOWTO/removeadisk.html){target=\_blank}
+[^1]: [Add Disk to LVM](https://tldp.org/HOWTO/LVM-HOWTO/removeadisk.html){target=\_blank}
+[^2]: [Remove Disk to LVM](https://tldp.org/HOWTO/LVM-HOWTO/removeadisk.html){target=\_blank}
