@@ -8,4 +8,4 @@ tags:
 
 #  Datenschutzerklärung
 
-<img src="./assets/logos/datenschutz-96.png" width="24" height="24" />
+<img src="assets/logos/datenschutz-96.png" width="24" height="24" />
