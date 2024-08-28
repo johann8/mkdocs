@@ -41,7 +41,7 @@ nav:
       - 'Neue HDD zu LVM hinzufügen': 'tutorials/linux/add-new-hdd-to-lvm.md'
     - 'Windows':
       - 'Tipps und Tricks': 'tutorials/windows/tipps-und-tricks.md'
-  - plugins/privacy.md
+  - 'Privacy': 'privacy.md'
   - 'About': 'about.md'
 
 # Configuration
