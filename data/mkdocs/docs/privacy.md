@@ -6,6 +6,8 @@ Date:    August 28, 2024
 tags:
 ---
 
-#  Datenschutzerklärung
+# <img src="../assets/logos/datenschutz-96.png" width="24" height="24" /> Datenschutzerklärung
 
-<img src="../assets/logos/datenschutz-96.png" width="24" height="24" />
+Der Link zu Datenschutzerklärung ist auf der Homepage von [`Wassermann Gruppe`][Wassermann Gruppe]
+
+[Wassermann Gruppe]: https://wassermanngruppe.de/
