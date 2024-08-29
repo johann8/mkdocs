@@ -39,7 +39,7 @@ nav:
       - 'Änderung des Partitionslayouts': 'tutorials/linux/change-partition-layout_lvm.md'
       - 'LVM Partition vergrößern': 'tutorials/linux/lvm-partition-vergroessern.md'
       - 'Neue HDD zu LVM hinzufügen': 'tutorials/linux/add-new-hdd-to-lvm.md'
-      - 'Markdown': 'tutorials/linux/tipps-und-tricks.md'
+      - 'Markdown': 'tutorials/linux/markdown-tipps.md'
     - 'Windows':
       - 'Tipps und Tricks': 'tutorials/windows/tipps-und-tricks.md'
   - 'Privacy': 'privacy.md'
