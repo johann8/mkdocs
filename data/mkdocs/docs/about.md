@@ -11,7 +11,6 @@ Mehr Informationen über das Unternehmen `Wassermann Gruppe` kann man direkt auf
 
 [Homepage]: https://wassermanngruppe.de/
 
----
 
 [^1]: [Homepage WG](https://wassermanngruppe.de/){target=\_blank}
 
