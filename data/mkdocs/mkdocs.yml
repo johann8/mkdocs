@@ -7,8 +7,8 @@ site_description: >-
   minutes – searchable, customizable, in 60+ languages, for all devices
 
 # Repository
-repo_name: johann8/meshcentral
-repo_url: https://github.com/johann8/meshcentral
+repo_name: johann8/mkdocs
+repo_url: https://github.com/johann8/mkdocs
 
 # Copyright
 copyright: >
