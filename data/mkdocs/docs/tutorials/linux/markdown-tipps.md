@@ -69,6 +69,21 @@ create a new layout and reference it in `mkdocs.yml`:
           debug: true
     ```
 ---
+
+### Links
+
+
+[`Wassermann Gruppe`][Wassermann Gruppe][^2]{target=\_blank} ist ein Fachunternehmen für die Ausführung von Hochspannungskabellegungen und Hochspannungsmontagen.
+Mehr Info kann man der [`Homepage`][Homepage] von `WG` entnehmen.
+
+[Wassermann Gruppe]: https://wassermanngruppe.de/
+[Homepage]: https://wassermanngruppe.de/
+
+[^2]: [Homepage WG](https://wassermanngruppe.de/){target=\_blank}
+
+
+---
+
 ### tip
 
 !!! tip "Automatically bundle Google Fonts"
@@ -160,7 +175,7 @@ This property must contain an [ISO 639-1 language code] and is used for the `hre
 
 ---
 
-Mailserver - dockerized 🐋
+Mailserver - dockerized[^1] 🐋
 
 ---
 ### Font awesome
