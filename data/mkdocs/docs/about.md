@@ -5,7 +5,14 @@ Authors: Johann Hahn
 Date:    Juli 09, 2024
 ---
 
-# Über `Wassermann Gruppe`
+<h1 align="center">Über Wassermann Gruppe</h1>
+
+Mehr Informationen über das Unternehmen `Wassermann Gruppe` kann man direkt auf der [`Homepage`][Homepage][^1]{target=\_blank} bekommen.
+
+[Homepage]: https://wassermanngruppe.de/
+
+[^1]: [Homepage WG](https://wassermanngruppe.de/){target=\_blank}
+
 ---
 
 === "Chinese (Simplified)"
