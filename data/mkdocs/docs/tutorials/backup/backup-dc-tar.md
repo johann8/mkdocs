@@ -17,6 +17,6 @@ Dieser Artikel beinhaltet eine Anleitung für Backup der `Docker Container` mit 
 ##### LVM Snapshot
 
 [^1]: [LVM Docu](https://docs.redhat.com/de/documentation/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/lvm_overview){target=\_blank}
-[^2]: [TAR Man](https://man7.org/linux/man-pages/man1/tar.1.html/){target=\_blank}
+[^2]: [TAR Man](https://man7.org/linux/man-pages/man1/tar.1.html){target=\_blank}
 
 
