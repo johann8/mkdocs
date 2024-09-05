@@ -31,6 +31,9 @@ nav:
       - 'MkDocs': 'tutorials/docker/mkdocs/index.md'
       - 'MariaDB': 'tutorials/docker/mariadb/index.md'
       - 'OpenLDAP': 'tutorials/docker/openldap/index.md'
+    - 'Backup':
+      - 'Docker Container mit TAR': 'tutorials/backup/backup-dc-tar.md'
+      - 'Docker Container mit Bacula': 'tutorials/backup/backup-dc-bacula.md'
     - 'Git':
       - 'Git repo anlegen': 'tutorials/git/git_repo_anlegen.md'
       - 'Git Tipps und Tricks': 'tutorials/git/tipps-und-tricks.md'
