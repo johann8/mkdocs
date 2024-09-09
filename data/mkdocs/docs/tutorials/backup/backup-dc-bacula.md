@@ -491,7 +491,7 @@ Dieser Artikel beinhaltet eine Anleitung für Backup der `Docker Container` mit 
 
         ```
 
-??? tip "Bacula Job hinzufügen,wenn Ubuntu Docker Container (DC) benutzt wird"
+??? tip "Bacula Job hinzufügen, wenn Ubuntu Docker Container (DC) benutzt wird"
 
     === "Job erstellen - Ubuntu Docker Container"
         ```bash
