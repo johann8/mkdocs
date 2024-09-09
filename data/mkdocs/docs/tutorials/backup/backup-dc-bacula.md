@@ -37,9 +37,9 @@ Dieser Artikel beinhaltet eine Anleitung für Backup der `Docker Container` mit 
 
 ##### Job aus Template hinzufügen
 
-??? tip "Bacula Job hinzufügen"
+??? tip "Bacula Job hinzufügen, wenn Alpine Docker Container (DC) benutzt wird"
 
-    === "Job erstellen, wenn Alpine Docker Container (DC) benutzt wird"
+    === "Job erstellen - Alpine Docker Container"
         ```bash
         cd /tmp
         wget https://raw.githubusercontent.com/johann8/bacularis-alpine/master/add_job_to_backup_docker_container_template 
@@ -63,9 +63,9 @@ Dieser Artikel beinhaltet eine Anleitung für Backup der `Docker Container` mit 
 
         ```
 
-??? tip "Bacula Job hinzufügen"
+??? tip "Bacula Job hinzufügen,wenn Ubuntu Docker Container (DC) benutzt wird"
 
-    === "Job erstellen, wenn Ubuntu Docker Container (DC) benutzt wird"
+    === "Job erstellen - Ubuntu Docker Container"
         ```bash
         cd /tmp
         wget https://raw.githubusercontent.com/johann8/bacularis-alpine/master/add_job_to_backup_docker_container_template -O /tmp/bacula_template
