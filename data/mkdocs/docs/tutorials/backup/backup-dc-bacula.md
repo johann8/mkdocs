@@ -12,7 +12,7 @@ Dieser Artikel beinhaltet eine Anleitung für Backup der `Docker Container` mit 
 Öfter laufen Datenbanken wie [`MySQL`][MySQL]{target=\_blank}, [`PostgreSQL`][PostgreSQL]{target=\_blank} usw. als Docker Container deshalb muss man die  Docker Container zuerst stoppen und erst danach ein Backup machen. So kann man gewährleisten, dass das Backup konsistent ist. Um dies zu bewerkstelingen habe ich ein `Bash Script` geschrieben, das dieses Vorhaben ermöglicht. Ich richte den `Docker Host` immer so ein, dass die Verzeichnisse `/opt` und `/var` jeweils auf einem `Logical Volume` gemounten sind. Das ermöglicht ein `LVM Snapshot` zu machen, zu mounten und zu sichern. Die Sicherung des LVM Snapshots erfolgt durch die Software `Bacula`.
 Das `Bash Script` macht folgendes:
 
-!!! note "Bash Script Ablauf: script_before_after.sh before"
+!!! note "Start Bash Script mit dem Parameter **before**: script_before_after.sh before"
 
     - Prüft, ob LVM vorhanden ist
     - Prüft, welche Logical Volume existieren
@@ -23,7 +23,7 @@ Das `Bash Script` macht folgendes:
     - Startet alle Docker Container
     - Bacula erstellt Backup
 
-!!! note "Bash Script Ablauf: script_before_after.sh after"
+!!! note "Start Bash Script mit dem Parameter **after**: script_before_after.sh after"
     - Unmountet LVM Snapshot
     - Löscht LVM Snapshot
 
