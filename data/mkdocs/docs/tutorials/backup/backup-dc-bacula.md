@@ -8,10 +8,29 @@ tags: [backup, docker, container, lvm, snapshot, bacula]
 
 # :fontawesome-brands-linux: Backup Docker Container mit TAR
 
-Dieser Artikel beinhaltet eine Anleitung für Backup der `Docker Container` mit Hilfe von [`LVM`][LVM][^1]{target=\_blank} Snapshot und [`Bacula`][Bacula]][^2]{target=\_blank}
+Dieser Artikel beinhaltet eine Anleitung für Backup der `Docker Container` mit Hilfe von [`LVM`][LVM][^1]{target=\_blank} Snapshot und [`Bacula`][Bacula]][^2]{target=\_blank}.
+Öfter laufen Datenbanken wie [`MySQL`][MySQL]{target=\_blank}, [`PostgreSQL`][PostgreSQL]{target=\_blank} usw. als Docker Container deshalb muss man die  Docker Container zuerst stoppen und erst danach ein Backup machen. So kann man gewährleisten, dass das Backup konsistent ist. Um dies zu bewerkstelingen habe ich ein `Bash Script` geschrieben, das dieses Vorhaben ermöglicht. Ich richte den `Docker Host` immer so ein, dass die Verzeichnisse `/opt` und `/var` jeweils auf einem `Logical Volume` gemounten sind. Das ermöglicht ein `LVM Snapshot` zu machen, zu mounten und zu sichern. Die Sicherung des LVM Snapshots erfolgt durch die Software `Bacula`.
+Das `Bash Script` macht folgendes:
+
+!!! note "Bash Script Ablauf: script_before_after.sh before"
+
+    - Prüft, ob LVM vorhanden ist
+    - Prüft, welche Logical Volume existieren
+    - Prüft, welche Volume Group existiert
+    - Stopt alle Docker Container
+    - Macht ein LVM Snapshot
+    - Mountet LVM Snapshot
+    - Startet alle Docker Container
+    - Bacula erstellt Backup
+
+!!! note "Bash Script Ablauf: script_before_after.sh after"
+    - Unmountet LVM Snapshot
+    - Löscht LVM Snapshot
 
 [LVM]: https://de.wikipedia.org/wiki/Logical_Volume_Manager
 [Bacula]: https://de.wikipedia.org/wiki/Bacula
+[MySQL]: https://mariadb.org/
+[PostgreSQL]: https://www.postgresql.org/
 
 ##### LVM Snapshot
 
