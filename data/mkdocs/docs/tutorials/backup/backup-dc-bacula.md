@@ -15,7 +15,7 @@ Das `Bash Script` [`script_before_after.sh`][script_before_after.sh] kennt zwei 
 
 | **Variable** | **Value** | **Description** |
 |:------------------------|:-------------------------|:-------------------------------------------------|
-| `LVM_PARTITION_DOCKER` | yes | Is there LVM Partition for docker container: yes | n. Run command: `lsblk` |
+| `LVM_PARTITION_DOCKER` | yes | Is there LVM Partition for docker container: yes \| n. Run command: `lsblk` |
 | `LV_DOCKER_NAME` | opt | Docker containers are installed on the Logical Volume named "opt". If empty, the containers will not be stopped |
 | `VOLGROUP` | rl_vmd63899 | Name of the volume group. Run command: `vgdisplay` |
 | `LV_NAME` | opt,var | Name of the logical volume to backup. Separated with comma or space. Run command: `lvdisplay` |
