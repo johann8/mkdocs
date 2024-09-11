@@ -39,7 +39,7 @@ Der Ablauf von `Bash Script` ist wie folgt:
     - Unmountet LVM Snapshot
     - Löscht LVM Snapshot
 
-[Docker Container]: ../../../tutorials/docker/
+[Docker Container]: ../docker/index.md
 [LVM]: https://de.wikipedia.org/wiki/Logical_Volume_Manager
 [Bacula]: https://de.wikipedia.org/wiki/Bacula
 [MySQL]: https://mariadb.org/
@@ -557,15 +557,15 @@ Der Ablauf von `Bash Script` ist wie folgt:
 ##### Job, Jobdefs unter Bacularis überprüfen 
 
 Vergleiche die Einstellungen mit den Screenshots weiter unten. Login auf Bacularis Startseite und gehe zu: <br>
-- Director => Configure director => Job => backup-rockyl8-docker-stopScript => edit
-![Konfiguration Job](../../../assets/screenshots/bacula_dc_job.jpg "Bacula Docker Job"){width=600}
+- Director => Configure director => Job => backup-rockyl8-docker-stopScript => edit <br>
+![Konfiguration Job](../../assets/screenshots/bacula_dc_job.jpg "Bacula Docker Job"){width=600}
 
-- Director => Configure director => JobDefs => rockyl8-docker-stopScript-job => edit
+- Director => Configure director => JobDefs => rockyl8-docker-stopScript-job => edit <br>
 ![Konfiguration JobDefs](../../../assets/screenshots/bacula_dc_jobdefs.jpg "Bacula Docker JobDefs"){width=600}
 
-- Director => Configure director => JobDefs => rockyl8-docker-stopScript-fs => edit
-![Konfiguration Fileset Bild 1](../../../assets/screenshots/bacula_dc_fileset1.jpg "Bacula Docker FileSys"){width=600}
-![Konfiguration Fileset Bild 2](../../../assets/screenshots/bacula_dc_fileset1.jpg "Bacula Docker FileSys"){width=600}
+- Director => Configure director => JobDefs => rockyl8-docker-stopScript-fs => edit <br>
+![Konfiguration Fileset Bild 1](../../../assets/screenshots/bacula_dc_fileset1.jpg "Bacula Docker FileSet"){width=600}
+![Konfiguration Fileset Bild 2](../../../assets/screenshots/bacula_dc_fileset1.jpg "Bacula Docker FileSet"){width=600}
 
 
 [^1]: [LVM Docu](https://docs.redhat.com/de/documentation/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/lvm_overview){target=\_blank}
