@@ -39,7 +39,7 @@ Der Ablauf von `Bash Script` ist wie folgt:
     - Unmountet LVM Snapshot
     - Löscht LVM Snapshot
 
-[Docker Container]: ./tutorials/docker/index.md
+[Docker Container]: ../../../tutorials/docker/index.md
 [LVM]: https://de.wikipedia.org/wiki/Logical_Volume_Manager
 [Bacula]: https://de.wikipedia.org/wiki/Bacula
 [MySQL]: https://mariadb.org/
