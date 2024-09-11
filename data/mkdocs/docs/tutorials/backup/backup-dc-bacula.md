@@ -556,10 +556,14 @@ Der Ablauf von `Bash Script` ist wie folgt:
 
 ##### Job, Jobdefs unter Bacularis überprüfen 
 
-Login auf Bacularis Startseite und gehe zu: Director => Configure director => backup-rockyl8-docker-stopScript => edit
-Vergleiche die Einstellungen mit dem Screenshot unten.
+Vergleiche die Einstellungen mit den Screenshots weiter unten. Login auf Bacularis Startseite und gehe zu: 
+Director => Configure director => Job => backup-rockyl8-docker-stopScript => edit
 ![Konfiguration Job](../../../assets/screenshots/bacula_dc_job.jpg)
+
+Director => Configure director => JobDefs => rockyl8-docker-stopScript-job => edit
 ![Konfiguration JobDefs](../../../assets/screenshots/bacula_dc_jobdefs.jpg)
+
+Director => Configure director => JobDefs => rockyl8-docker-stopScript-fs => edit
 ![Konfiguration Fileset Bild 1](../../../assets/screenshots/bacula_dc_fileset1.jpg)
 ![Konfiguration Fileset Bild 2](../../../assets/screenshots/bacula_dc_fileset1.jpg)
 
