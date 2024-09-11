@@ -11,15 +11,15 @@ tags: [backup, docker, container, lvm, snapshot, bacula]
 Dieser Artikel beinhaltet eine Anleitung für Backup der `Docker Container` mit Hilfe von [`LVM`][LVM][^1]{target=\_blank} Snapshot und [`Bacula`][Bacula][^2]{target=\_blank}.
 Öfter laufen Datenbanken wie [`MySQL`][MySQL]{target=\_blank}, [`PostgreSQL`][PostgreSQL]{target=\_blank} usw. als Docker Container deshalb muss man die  Docker Container zuerst stoppen und erst danach ein Backup machen. So kann man gewährleisten, dass das Backup konsistent ist. Um dies zu bewerkstelingen habe ich ein `Bash Script` geschrieben, das dieses Vorhaben ermöglicht. Ich richte den `Docker Host` immer so ein, dass die Verzeichnisse `/opt` und `/var` jeweils auf einem `Logical Volume` gemountet sind. Das ermöglicht ein `LVM Snapshot` zu machen, zu mounten und zu sichern. Die Sicherung des LVM Snapshots erfolgt durch die Software `Bacula`.
 
-Das `Bash Script` [`script_before_after.sh`][script_before_after.sh] kennt zwei Optionen `before` und `after`. Bacula ruft das Script mit der Option `before` vor der Sicherung auf und mit der Option `after` nach der Sicherung. Nachdem das Script geladen und installiert ist, müssen einige Variablen angepasst werden. Die wichtigsten Variablen findet man in der Tabelle unten.
+Das `Bash Script` [`script_before_after.sh`][script_before_after.sh] kennt zwei Optionen `before` und `after`. Bacula ruft das Script mit der Option `before` vor der Sicherung auf und mit der Option `after` nach der Sicherung. Nachdem das Script geladen und installiert ist, müssen einige Variablen angepasst werden. Die wichtigsten `Variablen` findet man in der Tabelle unten.
 
 | **Variable** | **Value** | **Description** |
 |:------------------------|:-------------------------|:-------------------------------------------------|
-| LVM_PARTITION_DOCKER | yes | Is there LVM Partition for docker container: yes | n |
-| LV_DOCKER_NAME | opt | Docker containers are installed on the Logical Volume named "opt". If empty, the containers will not be stopped |
-| VOLGROUP | rl_vmd63899 | Name of the volume group. Run command: `vgdisplay` |
-| LV_NAME | opt,var | Name of the logical volume to backup. Separated with comma or space. Run command: `lvdisplay` |
-| SNAPSIZE | 1G | Space to allocate for the snapshot in the volume group |
+| `LVM_PARTITION_DOCKER` | yes | Is there LVM Partition for docker container: yes | n. Run command: `lsblk` |
+| `LV_DOCKER_NAME` | opt | Docker containers are installed on the Logical Volume named "opt". If empty, the containers will not be stopped |
+| `VOLGROUP` | rl_vmd63899 | Name of the volume group. Run command: `vgdisplay` |
+| `LV_NAME` | opt,var | Name of the logical volume to backup. Separated with comma or space. Run command: `lvdisplay` |
+| `SNAPSIZE` | 1G | Space to allocate for the snapshot in the volume group |
 | `MOUNTDIR` | /mnt/lvm_snap | Path to mount point of LVM snapshot |
 
 Der Ablauf von `Bash Script` ist wie folgt:
