@@ -13,10 +13,14 @@ Dieser Artikel beinhaltet eine Anleitung für Backup der `Docker Container` mit 
 
 Das `Bash Script` [`script_before_after.sh`][script_before_after.sh] kennt zwei Optionen `before` und `after`. Bacula ruft das Script mit der Option `before` vor der Sicherung auf und mit der Option `after` nach der Sicherung. Nachdem das Script geladen und installiert ist, müssen einige Variablen angepasst werden. Die wichtigsten Variablen findet man in der Tabelle unten.
 
+<div align="center">
+
 | Variable | Value | Description |
 |:------------------------|:-------------------------|:-------------------------------------------------|
 | TZ | Europe/Berlin | Time zone |
 | DB_INIT | true or false | true - required for DB init only |
+
+</div>
 
 Der Ablauf von `Bash Script` ist wie folgt:
 
