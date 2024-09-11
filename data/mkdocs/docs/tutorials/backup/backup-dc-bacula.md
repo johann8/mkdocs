@@ -559,14 +559,14 @@ Der Ablauf von `Bash Script` ist wie folgt:
 Vergleiche die Einstellungen mit den Screenshots weiter unten. Login auf Bacularis Startseite und gehe zu:
 
 - Director => Configure director => Job => backup-rockyl8-docker-stopScript => edit <br>
-![Konfiguration Job](../../assets/screenshots/bacula_dc_job.jpg "Bacula Docker Job"){width=800}
+![Konfiguration Job](../../assets/screenshots/bacula_dc_job.jpg "Bacula Docker Job"){width=700}
 
 - Director => Configure director => JobDefs => rockyl8-docker-stopScript-job => edit <br>
-![Konfiguration JobDefs](../../assets/screenshots/bacula_dc_jobdefs.jpg "Bacula Docker JobDefs"){width=800}
+![Konfiguration JobDefs](../../assets/screenshots/bacula_dc_jobdefs.jpg "Bacula Docker JobDefs"){width=700}
 
 - Director => Configure director => JobDefs => rockyl8-docker-stopScript-fs => edit <br>
-![Konfiguration Fileset Bild 1](../../assets/screenshots/bacula_dc_fileset1.jpg "Bacula Docker FileSet"){width=800}<br>
-![Konfiguration Fileset Bild 2](../../assets/screenshots/bacula_dc_fileset1.jpg "Bacula Docker FileSet"){width=800}
+![Konfiguration Fileset Bild 1](../../assets/screenshots/bacula_dc_fileset1.jpg "Bacula Docker FileSet"){width=700}<br>
+![Konfiguration Fileset Bild 2](../../assets/screenshots/bacula_dc_fileset1.jpg "Bacula Docker FileSet"){width=700}
 
 
 [^1]: [LVM Docu](https://docs.redhat.com/de/documentation/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/lvm_overview){target=\_blank}
