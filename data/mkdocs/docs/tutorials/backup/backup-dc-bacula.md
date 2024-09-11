@@ -6,10 +6,10 @@ Date:    September 05, 2024
 tags: [backup, docker, container, lvm, snapshot, bacula]
 ---
 
-# :fontawesome-brands-linux: Backup Docker Container mit TAR
+# :fontawesome-brands-linux: Backup Docker Container mit der Software Bacula
 
 Dieser Artikel beinhaltet eine Anleitung für Backup der [`Docker Container`][Docker Container]{target=\_blank} mit Hilfe von [`LVM`][LVM][^1]{target=\_blank} Snapshot und [`Bacula`][Bacula][^2]{target=\_blank}.
-Öfter laufen Datenbanken wie [`MySQL`][MySQL]{target=\_blank}, [`PostgreSQL`][PostgreSQL]{target=\_blank} usw. als Docker Container deshalb muss man die  Docker Container zuerst stoppen und erst danach ein Backup machen. So kann man gewährleisten, dass das Backup konsistent ist. Um dies zu bewerkstelingen habe ich ein `Bash Script` geschrieben, das dieses Vorhaben ermöglicht. Ich richte den `Docker Host` immer so ein, dass die Verzeichnisse `/opt` und `/var` jeweils auf einem `Logical Volume` gemountet sind. Das ermöglicht ein `LVM Snapshot` zu machen, zu mounten und zu sichern. Die Sicherung des LVM Snapshots erfolgt durch die Software `Bacula`.
+Öfter laufen Datenbanken wie [`MySQL`][MySQL]{target=\_blank}, [`PostgreSQL`][PostgreSQL]{target=\_blank} usw. als Docker Container deshalb muss man die  Docker Container zuerst stoppen und erst danach ein Backup machen. So kann man gewährleisten, dass das Backup konsistent ist. Um dies bewerkstelligen zu können, habe ich ein [`Bash Script`][Bash Script]{target=\_blank} geschrieben, das dieses Vorhaben ermöglicht. Ich richte den `Docker Host` immer so ein, dass die Verzeichnisse `/opt` und `/var` jeweils auf einem `Logical Volume` gemountet sind. Das ermöglicht ein `LVM Snapshot` zu erstellen, zu mounten und zu sichern. Die Sicherung des LVM Snapshots erfolgt durch die Software `Bacula`.
 
 Das `Bash Script` [`script_before_after.sh`][script_before_after.sh] kennt zwei Optionen `before` und `after`. Bacula ruft das Script mit der Option `before` vor der Sicherung auf und mit der Option `after` nach der Sicherung. Nachdem das Script geladen und installiert ist, müssen einige Variablen angepasst werden. Die wichtigsten `Variablen` findet man in der Tabelle unten.
 
@@ -27,9 +27,9 @@ Der Ablauf von `Bash Script` ist wie folgt:
 !!! note "Start Bash Script mit dem Parameter before: script_before_after.sh before"
 
     - Prüft, ob LVM vorhanden ist
-    - Prüft, welche Logical Volume existieren
-    - Prüft, welche Volume Group existiert
-    - Stopt alle Docker Container
+    - Prüft, welche `Logical Volume` existieren
+    - Prüft, welche `Volume Group` existiert
+    - Stopt alle Docker Container mit Ausnahme von `Bacula Docker Stack` 
     - Macht ein LVM Snapshot
     - Mountet LVM Snapshot
     - Startet alle Docker Container
@@ -44,6 +44,7 @@ Der Ablauf von `Bash Script` ist wie folgt:
 [Bacula]: https://de.wikipedia.org/wiki/Bacula
 [MySQL]: https://mariadb.org/
 [PostgreSQL]: https://www.postgresql.org/
+[Bash Script]: https://raw.githubusercontent.com/johann8/bacularis-alpine/master/scripts/container_backup_before_after.sh
 [script_before_after.sh]: https://raw.githubusercontent.com/johann8/bacularis-alpine/master/scripts/container_backup_before_after.sh
 
 ##### LVM Snapshot
@@ -552,6 +553,16 @@ Der Ablauf von `Bash Script` ist wie folgt:
         docker-compose logs
         docker-compose logs bacularis
         ```
+
+##### Job, Jobdefs unter Bacularis überprüfen 
+
+Login auf Bacularis Startseite und gehe zu: Director => Configure director => backup-rockyl8-docker-stopScript => edit
+Vergleiche die Einstellungen mit dem Screenshot unten.
+![Konfiguration Job](../../../assets/screenshots/bacula_dc_job.jpg)
+![Konfiguration JobDefs](../../../assets/screenshots/bacula_dc_jobdefs.jpg)
+![Konfiguration Fileset Bild 1](../../../assets/screenshots/bacula_dc_fileset1.jpg)
+![Konfiguration Fileset Bild 2](../../../assets/screenshots/bacula_dc_fileset1.jpg)
+
 
 [^1]: [LVM Docu](https://docs.redhat.com/de/documentation/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/lvm_overview){target=\_blank}
 [^2]: [Bacula Homepage](https://www.bacula.org/){target=\_blank}
