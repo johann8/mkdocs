@@ -46,11 +46,11 @@ Der Ablauf von `Bash Script` ist wie folgt:
 [Bash Script]: https://raw.githubusercontent.com/johann8/tools/master/backup_lvm/backup_lvm_snap.sh
 [backup_lvm_snap.sh]: https://raw.githubusercontent.com/johann8/tools/master/backup_lvm/backup_lvm_snap.sh
 
-##### LVM Snapshot
+##### LVM Snapshot erstellen, anbinden sichern und löschen
 
-??? tip "Script um LVM Snapshot erstellen, anbinden und löschen"
+??? tip "Script einrichten"
 
-    === "Bash Script installieren"
+    === "Install Bash Script "
         ```bash
         wget https://raw.githubusercontent.com/johann8/tools/master/backup_lvm/backup_lvm_snap.sh -O /usr/local/bin/backupLVS.sh
         chmod 0700 /usr/local/bin/backupLVS.sh
@@ -60,7 +60,7 @@ Der Ablauf von `Bash Script` ist wie folgt:
 
         ```
 
-    === "backupLVS.sh"
+    === "Bash Script backupLVS.sh"
         ```bash
         #!/bin/bash
         #
@@ -624,11 +624,14 @@ Der Ablauf von `Bash Script` ist wie folgt:
         # ------        
         ```
 
-    === "crontab ergänzen"
+    === "Install crontab"
 
         ```bash
         crontab -e
+        -------
+        PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
 
+        ...
         # LVM snapshot of "opt and var": /mnt/nfsStorage/$(hostname -s)/lvm-snapshot
         15  2  *  *  *  /usr/local/bin/backupLVS.sh > /dev/null 2>&1
         ```
