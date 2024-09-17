@@ -504,7 +504,7 @@ Der Ablauf von `Bash Script` ist wie folgt:
     === "Job erstellen - Alpine Docker Container"
         ```bash
         cd /tmp
-        wget https://raw.githubusercontent.com/johann8/bacularis-alpine/master/add_job_to_backup_docker_container_template 
+        wget https://raw.githubusercontent.com/johann8/bacularis-alpine/master/add_job_to_backup_docker_container_template -O /tmp/bacula_template 
 
         # Set the Name of bacula client
         B_CLIENT=rockyl8
