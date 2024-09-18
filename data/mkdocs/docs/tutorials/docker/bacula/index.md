@@ -20,13 +20,13 @@ tags: [backup, docker, bacula]
     - Login auf der Bacularis Startseite
     - Jobs -> + Zeichen
     - Ausfüllen wie auf dem Bild Beispiel 1 - `Rockyl8 Jobs` <br>
-    ![Rockyl8 Jobs View](../../../assets/screenshots/bacula_add_client_view.jpg){width=600}
+    ![Rockyl8 Jobs View](../../../assets/screenshots/bacula_add_client_view.jpg){width=600} <br>
 
     - Ausfüllen wie auf dem Bild Beispiel 2 - `Rockyl8 Docker Jobs` <br>
-    ![Rockyl8 Docker Jobs View](../../../assets/screenshots/bacula_add_client_docker_view.jpg){width=600}
+    ![Rockyl8 Docker Jobs View](../../../assets/screenshots/bacula_add_client_docker_view.jpg){width=600} <br>
 
     - Ausfüllen wie auf dem Bild Beispiel 3 - `Bacula Catalog Jobs` <br>
     ![Bacula Catalog Jobs View](../../../assets/screenshots/bacula_add_catalog_view.jpg){width=600}
 
 [^1]: [Bacula Homepage](https://www.bacula.org/){target=\_blank}
-[^2]: [Bacularis Homepage](https://https://bacularis.app/){target=\_blank}
+[^2]: [Bacularis Homepage](https://bacularis.app/){target=\_blank}
