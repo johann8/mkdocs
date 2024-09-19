@@ -530,7 +530,7 @@ Der Ablauf von `Bash Script` ist wie folgt:
     === "Job erstellen - Ubuntu Docker Container"
         ```bash
         cd /tmp
-        wget https://raw.githubusercontent.com/johann8/bacularis-alpine/master/add_job_to_backup_docker_container_template -O /tmp/bacula_template
+        wget  https://raw.githubusercontent.com/johann8/bacularis-ubuntu/master/add_job_to_backup_docker_container_template -O /tmp/bacula_template
 
         # Set the Name of bacula client
         B_CLIENT=rockyl8
@@ -538,8 +538,8 @@ Der Ablauf von `Bash Script` ist wie folgt:
         less /tmp/bacula_template
 
         # Pfad ändern, wenn Ubuntu Docker Container (DC) benutzt wird
-        sed -i -e 's+/var/lib/bacula/+/opt/bacula/working/+g' /tmp/bacula_template
-        less /tmp/bacula_template  
+        #sed -i -e 's+/var/lib/bacula/+/opt/bacula/working/+g' /tmp/bacula_template
+        #less /tmp/bacula_template  
 
         # copy template to bacula-dir config
         cat /tmp/bacula_template >> /opt/bacularis/data/bacula/config/etc/bacula-dir.conf
