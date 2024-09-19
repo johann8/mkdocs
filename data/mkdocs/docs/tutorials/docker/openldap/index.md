@@ -37,7 +37,7 @@ Jeder Container repräsentiert eine einzelne Anwendung, die in einem überbrück
 
 <div class="grid cards" markdown>
    - <img src="../../../assets/logos/active-directory-80.png" width="20" height="20" /> [__OpenLDAP__](https://glpi-project.org/) OpenLDAP Server.
-   - <img src="../../../assets/logos/phpldapadmin_tr.png" width="35" height="25" /> [__PhpLDAPadmin__](https://ocsinventory-ng.org/?lang=en) Web-Anwendung PhpLDAPadmin.
+   - <img src="../../../assets/logos/phpldapadmin_tr.png" width="40" height="30" /> [__PhpLDAPadmin__](https://ocsinventory-ng.org/?lang=en) Web-Anwendung PhpLDAPadmin.
 </div>
 
 #### Bereiten Sie Ihr System vor
