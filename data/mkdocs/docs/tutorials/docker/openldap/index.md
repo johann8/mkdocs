@@ -10,12 +10,13 @@ tags: [Docker, OpenLDAP]
 
 !!! question "What is OpenLDAP?"
 
-    :simple-traefikproxy: [`OpenLDAP`][OpenLDAP][^1] Das Lightweight Directory Access Protocol (LDAP) ist ein Netzwerkprotokoll zur Abfrage und Änderung von Informationen verteilter Verzeichnisdienste. LDAP ist der De-facto-Industriestandard für Authentifizierung, Autorisierung sowie Adress- und Benutzerverzeichnisse. Die meisten Softwareprodukte, die mit Benutzerdaten umgehen müssen und am Markt relevant sind, unterstützen LDAP.
+    :simple-traefikproxy: [`OpenLDAP`][OpenLDAP]{target=\_blank}[^1] Das Lightweight Directory Access Protocol (LDAP) ist ein Netzwerkprotokoll zur Abfrage und Änderung von Informationen verteilter Verzeichnisdienste. LDAP ist der De-facto-Industriestandard für Authentifizierung, Autorisierung sowie Adress- und Benutzerverzeichnisse. Die meisten Softwareprodukte, die mit Benutzerdaten umgehen müssen und am Markt relevant sind, unterstützen LDAP. `Source Repository` von OpenLDAP findet man über diesen [`Link`][Link][^2]
     Standardport ist:
     - 389 für ungesicherte oder mit STARTTLS gesicherte Verbindungen
     -  636 für mit TLS gesicherte Verbindungen (LDAPS)
 
     [OpenLDAP]: https://www.openldap.org/
+    [Link]: https://www.openldap.org/software/repo.html
 
 #### Algemeine Information
 
