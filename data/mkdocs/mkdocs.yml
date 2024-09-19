@@ -18,6 +18,7 @@ copyright: >
 # Page tree
 nav:
   - 'Home': 'index.md'
+  - tags.md
   - 'Tutorials':
     - 'Docker': 
       - tutorials/docker/index.md
