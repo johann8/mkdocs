@@ -35,8 +35,8 @@ tags: [Docker, OpenLDAP]
 Jeder Container repräsentiert eine einzelne Anwendung, die in einem überbrückten (Bridged) Netzwerk verbunden sind:
 
 <div class="grid cards" markdown>
-   - <img src="../../../assets/logos/active-directory-80.png" width="20" height="20" /> [__OpenLDAP__](https://glpi-project.org/){target=\_blank}- Benutzer-Datenbank.
-   - <img src="../../../assets/logos/phpldapadmin_tr.png" width="40" height="30" /> [__PhpLDAPadmin__](https://ocsinventory-ng.org/?lang=en){target=\_blank}- Web-Anwendung zur Steuerung von OpenLDAP.
+   - <img src="../../../assets/logos/active-directory-80.png" width="20" height="20" /> [__OpenLDAP__](https://www.openldap.org/){target=\_blank}- Benutzer-Datenbank.
+   - <img src="../../../assets/logos/phpldapadmin_tr.png" width="40" height="30" /> [__PhpLDAPadmin__](https://github.com/leenooks/phpLDAPadmin){target=\_blank}- Web-Anwendung zur Steuerung von OpenLDAP.
 </div>
 
 ### Bereiten Sie Ihr System vor
