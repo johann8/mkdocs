@@ -98,4 +98,29 @@ tags: [git, repo]
     git remote -v
     git push -u origin master
     ```
+#####  `Git` - Lokales Repository mit Remote erneut abgleichen
+
+!!! tip ""
+
+    :material-lightbulb-on: **TIPP**
+
+    ```bash
+    # Wechseln zu Repo Ordner
+    cd /opt/mkdocs
+
+    # Alte Ordner löschen
+    rm -rf data/mkdocs/.cache
+    rm -rf data/mkdocs/*
+    ls -la data/mkdocs/
+
+    # Den Name von Branch anzeigen lassen
+    git branch
+
+    # Daten laden und speichern
+    git fetch
+    git reset --hard HEAD
+    git merge origin/master
+    ls -la data/mkdocs/
+    ```
+
 [^1]: :material-wikipedia: [Wikipedia - Git](https://de.wikipedia.org/wiki/Git){target=\_blank}
