@@ -116,7 +116,7 @@ This property must contain an [ISO 639-1 language code] and is used for the `hre
 
   [site_url]: https://www.mkdocs.org/user-guide/configuration/#site_url
   [ISO 639-1 language code]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
-  [Language selector preview]: ./assets/screenshots/language-selection.png
+  [Language selector preview]: ../../assets/screenshots/language-selection.png
 ---
 
 ### info
@@ -317,6 +317,8 @@ This example assumes you have:
     **Your mileage may vary depending on your hardware.**
 
 ---
+
+## custom-files
 
 ## Developers
 
