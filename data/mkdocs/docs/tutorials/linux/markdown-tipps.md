@@ -93,7 +93,7 @@ Mehr Info kann man der [`Homepage`][Homepage] von `WG` entnehmen.
     by automatically downloading and self-hosting the web font files.
 
   [data privacy]: https://developers.google.com/fonts/faq/privacy
-  [built-in privacy plugin]: ./plugins/privacy.md
+  [built-in privacy plugin]: ../../privacy.md
 ---
 
 [Docker] improves the user experience when switching between languages, e.g.,
@@ -104,7 +104,7 @@ No configuration is necessary. We're working hard on improving multi-language
 support in 2024, including making switching between languages even more seamless
 in the future.
 
-  [Docker]: ./tutorials/docker/index.md
+  [Docker]: ../docker/index.md
 
 ---
 <!-- This is a comment -->
