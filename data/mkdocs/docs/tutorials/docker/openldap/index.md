@@ -20,9 +20,9 @@ tags: [Docker, OpenLDAP]
 
 #### Algemeine Information
 
-!!! note "Allgemeine Information über OpenLDAP"
+!!! note "Allgemeine Information"
 
-    <img src="../../../assets/logos/active-directory-80.png" width="20" height="20" /> [`OpenLDAP`][OpenLDAP]
+    #<img src="../../../assets/logos/active-directory-80.png" width="20" height="20" /> [`OpenLDAP`][OpenLDAP]
 
     Für jede Anwendungen habe ich ein `Docker Image` gebaut, sodass die Installation und das Update sehr schnell erfolgen können.
     Docker Images befinden sich auf dem [Docker Hub][^3]. Die Links zu Docker Images: [`OpenLDAP Docker Image`][OpenLDAP Docker Image]{target=\_blank} und [`PhpLDAPadmin Docker Image`][PhpLDAPadmin Docker Image]{target=\_blank}
@@ -36,8 +36,8 @@ tags: [Docker, OpenLDAP]
 Jeder Container repräsentiert eine einzelne Anwendung, die in einem überbrückten (Bridged) Netzwerk verbunden sind:
 
 <div class="grid cards" markdown>
-   - <img src="../../../assets/logos/active-directory-80.png" width="20" height="20" /> [__OpenLDAP__](https://glpi-project.org/) OpenLDAP Server.
-   - <img src="../../../assets/logos/phpldapadmin_tr.png" width="40" height="30" /> [__PhpLDAPadmin__](https://ocsinventory-ng.org/?lang=en) Web-Anwendung PhpLDAPadmin.
+   - <img src="../../../assets/logos/active-directory-80.png" width="20" height="20" /> [__OpenLDAP__](https://glpi-project.org/) - Benutzer-Datenbank.
+   - <img src="../../../assets/logos/phpldapadmin_tr.png" width="40" height="30" /> [__PhpLDAPadmin__](https://ocsinventory-ng.org/?lang=en) - Web-Anwendung zur Steuerung von OpenLDAP.
 </div>
 
 #### Bereiten Sie Ihr System vor
