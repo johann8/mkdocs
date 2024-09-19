@@ -10,7 +10,7 @@ tags: [Docker, OpenLDAP]
 
 !!! question "What is OpenLDAP?"
 
-    :simple-traefikproxy: [`OpenLDAP`][OpenLDAP]{target=\_blank}[^1] Das Lightweight Directory Access Protocol (LDAP) ist ein Netzwerkprotokoll zur Abfrage und Änderung von Informationen verteilter Verzeichnisdienste. LDAP ist der De-facto-Industriestandard für Authentifizierung, Autorisierung sowie Adress- und Benutzerverzeichnisse. Die meisten Softwareprodukte, die mit Benutzerdaten umgehen müssen und am Markt relevant sind, unterstützen LDAP. `Source Repository` von OpenLDAP findet man über diesen [`Link`][Link][^2]
+    :simple-traefikproxy: [`OpenLDAP`][OpenLDAP]{target=\_blank}[^1] Das Lightweight Directory Access Protocol (LDAP) ist ein Netzwerkprotokoll zur Abfrage und Änderung von Informationen verteilter Verzeichnisdienste. LDAP ist der De-facto-Industriestandard für Authentifizierung, Autorisierung sowie Adress- und Benutzerverzeichnisse. Die meisten Softwareprodukte, die mit Benutzerdaten umgehen müssen und am Markt relevant sind, unterstützen LDAP. `Source Repository` von OpenLDAP findet man über diesen [`Link`][Link]{target=\_blank}[^2]
     Standardport ist:
     - 389 für ungesicherte oder mit STARTTLS gesicherte Verbindungen
     -  636 für mit TLS gesicherte Verbindungen (LDAPS)
@@ -22,18 +22,13 @@ tags: [Docker, OpenLDAP]
 
 !!! note "Allgemeine Information über OpenLDAP"
 
-    <img src="../../../assets/logos/logo-G-100-white.png" width="20" height="20" /> [`OpenLDAP`][OpenLDAP] ist sehr vielseitig. Die Anwendung ist modular aufgebaut: Inventarisierung, Verwaltung von Hard- und Software, Ticketsystem usw. Man kann den Funktionsumfang mit Hilfe von [`Plugins`][Plugins] erweitern. Für die Inventarisierung wird entweder ein [`OpenLDAP Agent`][OpenLDAP Agent] oder eine Anwendung namens [`OCS Inventory`][OCS Inventory] verwendet. Ich bevorzuge `OCS Inventory`.
-    Für jede Anwendungen habe ich ein `Docker Image` gebaut, sodass die Installation und das Update sehr schnell erfolgen können.
-    Die Docker Images befinden sich auf dem [Docker Hub][^3]. Die Links zu Docker Images: [`OpenLDAP Docker Image`][OpenLDAP Docker Image] und [`OCS Inventory Docker image`][OCS Inventory Docker image].
-    [`Hier`][Hier] ist die Beschreibung wie man `OCS Inventory` installiert und konfiguriert.
+    <img src="../../../assets/logos/active-directory-80.png" width="25" height="25" /> [`OpenLDAP`][OpenLDAP]
 
-    [Plugins]: https://github.com/pluginsOpenLDAP
-    [OpenLDAP Agent]: https://github.com/glpi-project/glpi-agent
-    [OCS Inventory]: https://github.com/OCSInventory-NG/OCSInventory-ocsreports
-    [OpenLDAP]: https://glpi-project.org
+    Für jede Anwendungen habe ich ein `Docker Image` gebaut, sodass die Installation und das Update sehr schnell erfolgen können.
+    Docker Images befinden sich auf dem [Docker Hub][^3]. Die Links zu Docker Images: [`OpenLDAP Docker Image`][OpenLDAP Docker Image]{target=\_blank} und [`PhpLDAPadmin Docker Image`][PhpLDAPadmin Docker Image]{target=\_blank}
+
     [OpenLDAP Docker Image]: https://hub.docker.com/repository/docker/johann8/alpine-glpi/general
-    [OCS Inventory Docker image]: https://hub.docker.com/repository/docker/johann8/alpine-ocs/general
-    [Hier]: https://docs.int.wassermanngruppe.de/tutorials/docker/ocsinventory/
+    [PhpLDAPadmin Docker Image]: https://hub.docker.com/repository/docker/johann8/phpldapadmin/general
 
 
 ## Install OpenLDAP as `docker container`
@@ -41,11 +36,8 @@ tags: [Docker, OpenLDAP]
 Jeder Container repräsentiert eine einzelne Anwendung, die in einem überbrückten (Bridged) Netzwerk verbunden sind:
 
 <div class="grid cards" markdown>
-   - <img src="../../../assets/logos/logo-G-100-white.png" width="20" height="20" /> [__OpenLDAP__](https://glpi-project.org/) IT Asset Management.
-   - <img src="../../../assets/logos/logo-ocs.png" width="20" height="20" /> [__OCS Inventory__](https://ocsinventory-ng.org/?lang=en) Open computers and software inventory.
-   - :simple-mariadb: [__MariaDB__](https://mariadb.org/) Datenbank.
-   - :simple-nginx: [__Nginx__](https://nginx.org/) Webserver für Komponenten des Stacks.
-   - :fontawesome-solid-memory: [__Memcached__](https://www.memcached.org/) Distributed memory object caching system.
+   - <img src="../../../assets/logos/active-directory-80.png" width="25" height="25" /> [__OpenLDAP__](https://glpi-project.org/) OpenLDAP Server.
+   - <img src="../../../assets/logos/phpldapadmin_tr.png" width="25" height="25" /> [__PhpLDAPadmin__](https://ocsinventory-ng.org/?lang=en) Web-Anwendung PhpLDAPadmin.
 </div>
 
 #### Bereiten Sie Ihr System vor
@@ -55,13 +47,9 @@ Bevor Sie `OpenLDAP` installieren, sollten Sie einige Voraussetzungen überprüf
 !!! info
     - [`Docker`][Docker] Dienst muss auf dem Host installiert sein.
     - Traefik muss als `Docker Service` installiert sein.
-    - [`MariaDB`][MariaDB] muss entweder als `Container` im gleichen `Docker Stack` laufen oder als extra `Docker Service` installiert sein.
-    - For OCS Inventory: Port `4443 TCP` muss auf dem `Docker Host` geöffnet werden, damit der OCS Inventory Agent eine Verbindung zum Server aufbauen kann.
-    - Einen DNS-Record z.B. `glpi.myfirma.de` erstellen.
+    - Einen DNS-Record z.B. `pla.myfirma.de` erstellen.
 
     [Docker]: ../dockerinstall/index.md
-    [MariaDB]: ../mariadb/index.md
-
 
 #### OpenLDAP installieren
 
