@@ -301,6 +301,6 @@ Wenn keine Fehlermeldungen erschienen sind kann man die Startseite von Traefik a
 
 
 [^1]: :material-wikipedia: [Wikipedia - OpenLDAP](https://de.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol){target=\_blank}
-[^2]: :material-github: [Github - OpenLDAP](https://www.openldap.org/software/repo.html){target=\_blank}
+[^2]: :material-source-repository-multiple: [Repo - OpenLDAP](https://www.openldap.org/software/repo.html){target=\_blank}
 [^3]: :material-docker: [Docker Hub](https://github.com/johann8/openldap-alpine){target=\_blank}
 
