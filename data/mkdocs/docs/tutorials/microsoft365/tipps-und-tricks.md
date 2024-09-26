@@ -7,4 +7,4 @@ tags: [microsoft365, tipps, tricks]
 ---
 
 
-# Microsoft365
+# :material-microsoft-office: Microsoft365
