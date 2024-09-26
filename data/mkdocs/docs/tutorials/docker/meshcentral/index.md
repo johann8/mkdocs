@@ -6,7 +6,7 @@ Date:    Juli 23, 2024
 tags: [Docker, Meschcentral, Remote, Support]
 ---
 
-# MeshCentral
+# <img src="../../../assets/logos/meshcentral.png" width="28" height="26" /> MeshCentral
 
 !!! question "What is MeshCentral?"
 
