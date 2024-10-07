@@ -6,7 +6,7 @@ Date:    Oktober 07, 2024
 tags:    [monit, monitoring, linux]
 ---
 
-# <img src="../../../assets/logos/monit.png" width="28" height="28" /> Monit
+# <img src="../../../assets/logos/monit.png" width="30" height="30" /> Monit
 
 
 [`Monit`][Monit]{target=\_blank}
