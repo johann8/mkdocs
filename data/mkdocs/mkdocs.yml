@@ -44,6 +44,7 @@ nav:
       - 'LVM Partition vergrößern': 'tutorials/linux/lvm-partition-vergroessern.md'
       - 'Neue HDD zu LVM hinzufügen': 'tutorials/linux/add-new-hdd-to-lvm.md'
       - 'Markdown': 'tutorials/linux/markdown-tipps.md'
+      - 'Monit': 'tutorials/linux/monit.md'
     - 'Microsoft365': 'tutorials/microsoft365/tipps-und-tricks.md'
     - 'Windows':
       - 'Tipps und Tricks': 'tutorials/windows/tipps-und-tricks.md'
