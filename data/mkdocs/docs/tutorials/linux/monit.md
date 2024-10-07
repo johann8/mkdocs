@@ -1,0 +1,22 @@
+---
+Title: Monit
+Summary: Monitoring tool
+Authors: Johann Hahn
+Date:    Oktober 07, 2024
+tags:
+---
+
+# <img src="../../assets/logos/monit.png" width="32" height="32" /> Monit
+
+
+[`Monit`][Monit]{target=\_blank}
+
+[Monit]: https://mmonit.com/ 
+
+??? tip "Bash Script um `Monit` upzudaten | zu installieren"
+
+    === "monit_update_install.sh"
+        
+        ```bash
+       
+        ```
