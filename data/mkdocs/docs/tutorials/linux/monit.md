@@ -3,10 +3,10 @@ Title: Monit
 Summary: Monitoring tool
 Authors: Johann Hahn
 Date:    Oktober 07, 2024
-tags:
+tags:    [monit, monitoring, linux]
 ---
 
-# <img src="../../assets/logos/monit.png" width="32" height="32" /> Monit
+# <img src="../../assets/logos/monit.png" width="28" height="28" /> Monit
 
 
 [`Monit`][Monit]{target=\_blank}
