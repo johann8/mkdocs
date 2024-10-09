@@ -29,7 +29,7 @@ tags:    [monit, monitoring, linux]
         cp man/man1/monit.1 /usr/share/man/man1/
         mkdir /etc/monit.d
         cd /tmp
-        rm -rf monit-5.32.0*
+        rm -rf  monit-${VERSION}*
         ln -s /usr/local/bin/monit /bin/monit
         mkdir /var/lib/monit/
         mkdir /var/monit
@@ -48,17 +48,17 @@ tags:    [monit, monitoring, linux]
         # egrep -v '(^.*#|^$)' /etc/monitrc
         set log /var/log/monit.log
         set pidfile /var/run/monit.pid
-        set idfile /var/lib/monit/.monit.id
-        set statefile /var/lib/monit/.monit.state
-        set limits {
-        }
-        set mailserver smtp.mydomain.de port 587
-              username "info@mydomain.de" password "MySuperPassword123"
+        set idfile /var/lib/monit/monit.id
+        set statefile /var/lib/monit/monit.state
+         set limits {
+         }
+         set mailserver smtp.mydomain.de port 587
+              username "helpdesk@mydomain.de" password "MySuperPW123"
               using tls
          set eventqueue
          set mail-format {
-           from:    Monit <monit@$HOST>
-           subject: monit alert --  $EVENT $SERVICE
+           from:    Monit <monit@mydomain.de>
+           subject: monit alert --  $EVENT $SERVICE -- $HOST
            message: $EVENT Service $SERVICE
                          Date:        $DATE
                          Action:      $ACTION
@@ -67,6 +67,7 @@ tags:    [monit, monitoring, linux]
                     Your faithful employee,
                     Monit
          }
+         set alert j.user@mydomain.de
         set httpd port 2812 and
             allow 0.0.0.0/0
             allow @wheel
@@ -80,12 +81,23 @@ tags:    [monit, monitoring, linux]
             if space usage > 80% for 5 times within 15 cycles then alert
             if inode usage > 80% for 5 times within 15 cycles then alert
          check filesystem boot_fs with path /boot
+            if space usage > 80% for 5 times within 15 cycles then alert
+            if inode usage > 80% for 5 times within 15 cycles then alert
+         check filesystem var_fs with path /var
+            if space usage > 90% for 5 times within 15 cycles then alert
+            if inode usage > 90% for 5 times within 15 cycles then alert
+         check filesystem opt_fs with path /opt
+            if space usage > 90% for 5 times within 15 cycles then alert
+            if inode usage > 90% for 5 times within 15 cycles then alert
+         check filesystem pbsNFS_fs with path /mnt/pbsNFS
             if space usage > 90% for 5 times within 15 cycles then alert
             if inode usage > 90% for 5 times within 15 cycles then alert
           include /etc/monit.d/*
         ```
 
 ##### Monit -  Beispiele
+
+??? tip "`Monit` - einige Beispiele"
 
     === "Monitor Docker"
 
