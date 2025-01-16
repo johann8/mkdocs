@@ -8,7 +8,7 @@ tags: [proxmox, mdadm, raid, lvm]
 
 # :fontawesome-brands-linux: Proxmox VE - Software RAID einrichten
 
-Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von Software RAID [`MDADM`][MDADM]{target=\_blank}[^2] unter [`Proxmox VE`][Proxmox VE]{target=\_blank}[^1].
+Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von Software RAID [`MDADM`][MDADM]{target=\_blank}[^2] unter [`Proxmox VE`][Proxmox VE]{target=\_blank}[^1]
 
 [Proxmox VE]: https://de.wikipedia.org/wiki/Proxmox_VE
 [MDADM]: https://de.wikipedia.org/wiki/Mdadm
