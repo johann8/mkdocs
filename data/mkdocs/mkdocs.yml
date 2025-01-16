@@ -46,6 +46,10 @@ nav:
       - 'Markdown': 'tutorials/linux/markdown-tipps.md'
       - 'Monit': 'tutorials/linux/monit.md'
     - 'Microsoft365': 'tutorials/microsoft365/tipps-und-tricks.md'
+    - 'Proxmox':
+      - 'Proxmox Install': 'tutorials/proxmox/proxmox-install.md'
+      - 'Proxmox MDADM': 'tutorials/proxmox/proxmox-mdadm.md'
+      - 'Proxmox Umzug auf neue hardware': 'tutorials/proxmox/proxmox-umzug-neue-hardware.md'
     - 'Windows':
       - 'Tipps und Tricks': 'tutorials/windows/tipps-und-tricks.md'
   - 'Privacy': 'privacy.md'
