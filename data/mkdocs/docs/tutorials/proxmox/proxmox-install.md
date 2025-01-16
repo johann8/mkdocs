@@ -8,7 +8,7 @@ tags: [proxmox, kvm, qemu, vm, lxc]
 
 # :fontawesome-brands-linux: Proxmox VE installation
 
-Dieser Artikel beinhaltet eine Anleitung zu Installation und Einrichtung von [`Proxmox VE`][Proxmox VE][^1]{target=\_blank}.
+Dieser Artikel beinhaltet eine Anleitung zu Installation und Einrichtung von [`Proxmox VE`][Proxmox VE]{target=\_blank}[^1]
 
 [Proxmox VE]: https://de.wikipedia.org/wiki/Proxmox_VE
 
