@@ -21,9 +21,12 @@ Proxmox VE stellt zwei Virtualisierungstechnologien auf einer Plattform bereit. 
 ??? tip "USB-Stck vorbereiten"
 
     Porxmox VE ISO Installer kann man von [hier]{target=\_blank} downloaden. <br>
-    Mit dem Tool [`Ventoy`][Ventoy]{target=\_blank}[^2] bereitet man den USB-Stick wie folgt vor:<br>
+    Mit dem Tool [`Ventoy`][Ventoy]{target=\_blank}[^2] bereitet man den USB-Stick wie folgt vor:
+
     - Den leeren USB-Stick in ein Windows Rechner einstecken <br>
+
     - Ventoy App starten und auf `Install` klicken<br>
+
     - Ein Ordner `tools` erstellen und die ISO-Datei in den Ordner kopieren<br>
 
 [hier]: https://www.proxmox.com/en/downloads
