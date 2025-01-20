@@ -35,6 +35,25 @@ Proxmox VE stellt zwei Virtualisierungstechnologien auf einer Plattform bereit. 
 ##### Proxmox VE installieren
 
 ??? tip "Proxmox VE auf neuer Hardware installieren"
+    
+    USB-Stick ad die neue Hardware anschliessen und den Server starten. Über die Taste `F12` komt man ins `BIOS` und nimmt die notwendigen Einstellungen vor.  
+    Auch hier kommt man ins BIOS vom `RAID-Controller`. Wir haben drei 4TB Festplatten an diesem RAID-Controller angeschlossen. Es wird ein `RAID1` mit einer `Hot-Spare-Festplatte` erstellt. Darauf wird Proxmox VE installiert.
+
+    Über die Taste F11 (Supermicro Mainmoard) kommt man ins Boot-Menü und wählt den Boot von USB-Stick.
+    Es erscheint kurz danach ein Menü und man wählt `Install Proxmox VE (Graphical)` aus. Die Installation von Proxmox VE wird von einem Installationsassistent begleitet.
+    
+    Als `Filesysten` wählt man `ext4` und als `Target Hardisk` `sda` und klickt auf die Taste `Options`. Im nächste Fenster nehmen wir folgende Einstellungen vor:
+ 
+    ```
+    swapsize: 16GB  - Die Größe der `SWAP` Partition 
+    maxroot:  70GB  - Die Größe der `root` Partition
+    minfree:  16GB  - Freier Platz für LVM Snapshots
+
+    ```
+
+    Der Installationsassistent erstellt drei Partitonen: sda1=boot, sda2=UEFI und sda3=Linux LVM. Es werden drei LVs gemäß unseren Angaben angelegt: `LV Name: root` 70GB; `LV Name: swap` 16GB; 16GB werden frei gelassen und `LV Name: data` der Rest des Speicherplatzes als `Lokales Storage`. Nach der Installation über den Befehl `lvdisplay` kann man sich die Partitionierung genau anschauen.
+
+    Wenn im Server mehrere Netzwerkkarten installiert sind, dann wird die aktive Netzwerkkarte mit einem grünen Punkt gekennzeichnet. Nach der erfolgreichen Installation startet der Server neu und es wird die URL angezeigt, über die man das Webinterface erreichen kann. 
 
 ##### Proxmox VE Netzwerk einrichten
 
