@@ -25,7 +25,7 @@ Proxmox VE stellt zwei Virtualisierungstechnologien auf einer Plattform bereit. 
 
     - Den leeren USB-Stick in ein Windows Rechner einstecken
 
-    - Ventoy App starten und auf `Install` klicken
+    - Ventoy App starten, USB-Stick aus Dropdown-Liste wählen und auf `Install` klicken
 
     - Ein Ordner `tools` erstellen und die ISO-Datei in den Ordner kopieren
 
