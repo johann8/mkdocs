@@ -34,7 +34,12 @@ Proxmox VE stellt zwei Virtualisierungstechnologien auf einer Plattform bereit. 
 
 ##### Proxmox VE installieren
 
-#### Proxmox VE Netzwerk einrichten
+??? tip "Proxmox VE auf neuer Hardware installieren"
+
+##### Proxmox VE Netzwerk einrichten
+
+??? tip "Netzwerk einrichten"
+
 
 [^1]: [Proxmox VE Homepage](https://www.proxmox.com/de/){target=\_blank}
 [^2]: [Ventoy Homepage](https://ventoy.net/en/index.html){target=\_blank}
