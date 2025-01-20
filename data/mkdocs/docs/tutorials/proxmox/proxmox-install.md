@@ -14,7 +14,15 @@ Dieser Artikel beinhaltet eine Anleitung zu Installation und Einrichtung von [`P
 
 Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplattform für Server. Es kombiniert KVM- und Container-basierte Virtualisierung und verwaltet virtuelle Maschinen, Container, Storage, virtuelle Netzwerke und Hochverfügbarkeits-Cluster übersichtlich über die zentrale Managementoberfläche.
 
-Proxmox VE stellt zwei Virtualisierungstechnologien auf einer Plattform bereit. Dies bietet maximale Flexibilität für die virtualisierte IT-Infrastruktur. Verwenden Sie KVM für virtuelle Maschinen und Container für leichtgewichtige Linux-Anwendungen.
+---
+
+> [!NOTE]
+>
+> Proxmox VE stellt zwei Virtualisierungstechnologien auf einer Plattform bereit
+> Dies bietet maximale Flexibilität für die virtualisierte IT-Infrastruktur
+> Verwenden Sie KVM für virtuelle Maschinen und Container für leichtgewichtige Linux-Anwendungen
+
+---
 
 ##### USB-Stck für die Installation von Proxmox VE vorbereiten
 
@@ -42,7 +50,10 @@ Proxmox VE stellt zwei Virtualisierungstechnologien auf einer Plattform bereit. 
     Über die Taste F11 (Supermicro Mainmoard) kommt man ins Boot-Menü und wählt den Boot von USB-Stick.
     Es erscheint kurz danach ein Menü und man wählt `Install Proxmox VE (Graphical)` aus. Die Installation von Proxmox VE wird von einem Installationsassistent begleitet.
     
-    Als `Filesysten` wählt man `ext4` und als `Target Hardisk` `sda` und klickt auf die Taste `Options`. Im nächste Fenster nehmen wir folgende Einstellungen vor:
+    Als `Filesysten` wählt man `ext4` und als `Target Hardisk` `sda` und klickt auf die Taste `Options`
+    ![Proxmox VE install Image 1](../../assets/screenshots/pve_install_01.jpg "Choose target disk"){width=700} 
+
+    Im nächste Fenster nehmen wir folgende Einstellungen vor:
  
     ```
     swapsize: 16GB  - Die Größe der `SWAP` Partition 
@@ -50,6 +61,7 @@ Proxmox VE stellt zwei Virtualisierungstechnologien auf einer Plattform bereit. 
     minfree:  16GB  - Freier Platz für LVM Snapshots
 
     ```
+    ![Proxmox VE install Image 1](../../assets/screenshots/pve_install_02.jpg "Choose options"){width=700}
 
     Der Installationsassistent erstellt drei Partitonen: sda1=boot, sda2=UEFI und sda3=Linux LVM. Es werden drei LVs gemäß unseren Angaben angelegt: `LV Name: root` 70GB; `LV Name: swap` 16GB; 16GB werden frei gelassen und `LV Name: data` der Rest des Speicherplatzes als `Lokales Storage`. Nach der Installation über den Befehl `lvdisplay` kann man sich die Partitionierung genau anschauen.
 
