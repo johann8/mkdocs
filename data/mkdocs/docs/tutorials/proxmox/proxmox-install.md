@@ -18,9 +18,9 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
 
 !!! info
 
-    Proxmox VE stellt zwei Virtualisierungstechnologien auf einer Plattform bereit <br>
-    Dies bietet maximale Flexibilität für die virtualisierte IT-Infrastruktur <br>
-    Verwenden Sie KVM für virtuelle Maschinen und Container für leichtgewichtige Linux-Anwendungen <br>
+    - Proxmox VE stellt zwei Virtualisierungstechnologien auf einer Plattform bereit <br>
+    - Dies bietet maximale Flexibilität für die virtualisierte IT-Infrastruktur <br>
+    - Verwenden Sie KVM für virtuelle Maschinen und Container für leichtgewichtige Linux-Anwendungen <br>
 
 ---
 
