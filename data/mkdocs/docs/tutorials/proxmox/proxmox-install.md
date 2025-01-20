@@ -16,13 +16,15 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
 
 Proxmox VE stellt zwei Virtualisierungstechnologien auf einer Plattform bereit. Dies bietet maximale Flexibilität für die virtualisierte IT-Infrastruktur. Verwenden Sie KVM für virtuelle Maschinen und Container für leichtgewichtige Linux-Anwendungen.
 
-##### USB-Stck für die Installation von Proxmox VE vorbeeiten
+##### USB-Stck für die Installation von Proxmox VE vorbereiten
 
-Porxmox VE ISO Installer kann man von [hier]{target=\_blank} downloaden.
-Mit dem Tool [`Ventoy`][Ventoy]{target=\_blank}[^2] bereitet man den USB-Stick wie folgt vor:
-- Den leeren USB-Stick in ein Windows Rechner einstecken 
-- Ventoy App starten und auf `Install` klicken
-- Ein Ordner `tools` erstellen und die ISO-Datei in den Ordner kopieren
+??? tip "USB-Stck vorbereiten"
+
+    Porxmox VE ISO Installer kann man von [hier]{target=\_blank} downloaden. <br>
+    Mit dem Tool [`Ventoy`][Ventoy]{target=\_blank}[^2] bereitet man den USB-Stick wie folgt vor:<br>
+    - Den leeren USB-Stick in ein Windows Rechner einstecken <br>
+    - Ventoy App starten und auf `Install` klicken<br>
+    - Ein Ordner `tools` erstellen und die ISO-Datei in den Ordner kopieren<br>
 
 [hier]: https://www.proxmox.com/en/downloads
 [Ventoy]: https://ventoy.net/en/download.html
