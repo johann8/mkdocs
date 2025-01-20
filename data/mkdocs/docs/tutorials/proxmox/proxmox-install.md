@@ -18,9 +18,9 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
 
 !!! info
 
-    Proxmox VE stellt zwei Virtualisierungstechnologien auf einer Plattform bereit
-    Dies bietet maximale Flexibilität für die virtualisierte IT-Infrastruktur
-    Verwenden Sie KVM für virtuelle Maschinen und Container für leichtgewichtige Linux-Anwendungen
+    Proxmox VE stellt zwei Virtualisierungstechnologien auf einer Plattform bereit <br>
+    Dies bietet maximale Flexibilität für die virtualisierte IT-Infrastruktur <br>
+    Verwenden Sie KVM für virtuelle Maschinen und Container für leichtgewichtige Linux-Anwendungen <br>
 
 ---
 
@@ -51,6 +51,7 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
     Es erscheint kurz danach ein Menü und man wählt `Install Proxmox VE (Graphical)` aus. Die Installation von Proxmox VE wird von einem Installationsassistent begleitet.
     
     Als `Filesysten` wählt man `ext4` und als `Target Hardisk` `sda` und klickt auf die Taste `Options` <br>
+
     ![Proxmox VE install Image 1](../../assets/screenshots/pve_install_01.jpg "Choose target disk"){width=600} 
 
     Im nächste Fenster nehmen wir folgende Einstellungen vor:
