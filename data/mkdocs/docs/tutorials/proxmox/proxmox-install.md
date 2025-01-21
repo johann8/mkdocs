@@ -72,8 +72,7 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
 
 ??? tip "Netzwerk einrichten"
 
-    Das Netzwerk richtet man entweder über das Proxmox VE WEB-Interface oder über Shell ein. <br>
-    Die Netzwerk Konfiguration befindet sich in der Datei `/etc/network/interfaces`. <br>
+    Das Netzwerk richtet man entweder über das Proxmox VE WEB-Interface oder über Shell ein. Die Netzwerk Konfiguration befindet sich in der Datei `/etc/network/interfaces`. <br>
     Während der Installation richtet Proxmox automatisch ein `bridge interface` [`vmbr0`][vmbr0]{target=\_blank}. Man kann es sich als einen virtuellen Switch vorstellen, an den die Gäste und die physischen Schnittstellen angeschlossen sind.
 
     [vmbr0]: https://pve.proxmox.com/wiki/Network_Configuration
@@ -116,11 +115,11 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
 
     source /etc/network/interfaces.d/*
     ```
-    Das zweite `bridge interface` `vmbr1` ist für die direkte Verbindung zum Storage Server PBS01 gedacht.
-    Wenn man manuelle Änderungen direkt in der Datei `/etc/network/interfaces` vorgenommen haben, kann man diese mit dem Befehl `ifreload -a` übernehmen.
+    Das zweite `bridge interface` `vmbr1` ist für die direkte Verbindung zum Storage Server PBS01 gedacht. <br>
+    Wenn man manuelle Änderungen direkt in der Datei `/etc/network/interfaces` vorgenommen hat, kann man diese mit dem Befehl `ifreload -a` übernehmen. <br>
     Wenn man Proxmox VE auf Debian installiert hat oder von einer älteren Proxmox VE-Installation auf Proxmox VE ab Version 7.0 aktualisiert hat, muss man sicher stellen, dass `ifupdown2`` installiert ist: `apt-get install ifupdown2`
 
-    - Überprüfe die Konfiguration 
+    - Überprüfung der Konfiguration 
 
     ```bash
     # show route
