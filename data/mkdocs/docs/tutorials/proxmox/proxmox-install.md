@@ -189,6 +189,44 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
 
     ```
 
+    - Namen von Netzwerkgeräten überschreiben
+
+    ```bash
+    # show all network interfaces
+    ip link show
+    ----
+    ...
+    3: enp3s0f1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq master vmbr0 state UP mode DEFAULT group default qlen 1000
+        link/ether f0:b2:b9:16:60:b0 brd ff:ff:ff:ff:ff:ff
+    ...
+    5: enp3s0f2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq master vmbr1 state UP mode DEFAULT group default qlen 1000
+        link/ether f0:b2:b9:16:60:b1 brd ff:ff:ff:ff:ff:ff
+    ...
+
+    # Änderung "enp3s0f1" zu "eth0"
+    vim /etc/systemd/network/10-eth0.link
+    ----
+    [Match]
+    MACAddress=f0:b2:b9:16:60:b0
+
+    [Link]
+    Name=eth0
+    ----
+
+    # Änderung "enp3s0f2" zu "eth1"
+    vim /etc/systemd/network/10-eth1.link
+    ----
+    [Match]
+    MACAddress=f0:b2:b9:16:60:b1
+
+    [Link]
+    Name=eth1
+    ----
+
+    # Restart Server
+    reboot
+    ```
+
 [^1]: [Proxmox VE Homepage](https://www.proxmox.com/de/){target=\_blank}
 [^2]: [Ventoy Homepage](https://ventoy.net/en/index.html){target=\_blank}
 
