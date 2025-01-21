@@ -72,6 +72,122 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
 
 ??? tip "Netzwerk einrichten"
 
+    Das Netzwerk richtet man entweder über das Proxmox VE WEB-Interface oder über Shell ein. <br>
+    Die Netzwerk Konfiguration befindet sich in der Datei `/etc/network/interfaces`. <br>
+    Während der Installation richtet Proxmox automatisch ein `bridge interface` [`vmbr0`][vmbr0]{target=\_blank}. Man kann es sich als einen virtuellen Switch vorstellen, an den die Gäste und die physischen Schnittstellen angeschlossen sind.
+
+    [vmbr0]: https://pve.proxmox.com/wiki/Network_Configuration
+
+    Ein Beispiel für die Netzwerk-Konfiguration:
+
+    ```bash
+    # vim /etc/network/interfaces
+    auto lo
+    iface lo inet loopback
+
+    iface eno1 inet manual
+
+    iface eno2 inet manual
+
+    #Intel Card Port oben
+    iface eth0 inet manual
+
+    #Intel Card Port unten
+    iface eth1 inet manual
+
+    #IPMI network card
+    iface enxbe3af2b6059f inet manual
+
+    auto vmbr0
+    iface vmbr0 inet static
+            address 192.168.18.225/24
+            gateway 192.168.18.1
+            bridge-ports eth0
+            bridge-stp off
+            bridge-fd 0
+
+    # Link to PBS01
+    auto vmbr1
+    iface vmbr1 inet static
+            address 10.0.20.2/24
+            bridge-ports eth1
+            bridge-stp off
+            bridge-fd 0
+
+    source /etc/network/interfaces.d/*
+    ```
+    Das zweite `bridge interface` `vmbr1` ist für die direkte Verbindung zum Storage Server PBS01 gedacht.
+    Wenn man manuelle Änderungen direkt in der Datei `/etc/network/interfaces` vorgenommen haben, kann man diese mit dem Befehl `ifreload -a` übernehmen.
+    Wenn man Proxmox VE auf Debian installiert hat oder von einer älteren Proxmox VE-Installation auf Proxmox VE ab Version 7.0 aktualisiert hat, muss man sicher stellen, dass `ifupdown2`` installiert ist: `apt-get install ifupdown2`
+
+    - Überprüfe die Konfiguration 
+
+    ```bash
+    # show route
+    ip route list
+    ----
+    default via 192.168.18.1 dev vmbr0 proto kernel onlink
+    10.0.20.0/24 dev vmbr1 proto kernel scope link src 10.0.20.2
+    192.168.18.0/24 dev vmbr0 proto kernel scope link src 192.168.18.225
+    ----
+
+    # Restart networking service
+    systemctl restart networking
+    systemctl status networking
+
+    # ip fowarding
+    echo 1 > /proc/sys/net/ipv4/ip_forward
+    cat /proc/sys/net/ipv4/ip_forward
+
+    # Hosts file
+    # vim /etc/hosts
+    ----------------
+    127.0.0.1 localhost.localdomain localhost
+    192.168.18.225 pve01.wkt.local pve01
+    192.168.18.23  rserver.domain.de rserver
+    192.168.18.227  bareos-sd
+    ----
+
+    # vim resolv.conf
+    ----
+    search wkt.local int.wassermanngruppe.de
+    nameserver 192.168.18.21
+    nameserver 192.168.18.1
+    ----
+    ```
+
+    - Debian sources
+
+    ```bash
+    # vim /etc/apt/sources.list
+    ----
+    deb http://ftp.de.debian.org/debian bookworm main contrib
+
+    deb http://ftp.de.debian.org/debian bookworm-updates main contrib
+
+    # security updates
+    deb http://security.debian.org bookworm-security main contrib
+    -----
+    ```
+
+    - Proxmox VE sources
+
+    ```bash
+    # vim /etc/apt/sources.list.d/pve-enterprise.list
+    #deb https://enterprise.proxmox.com/debian/pve bookworm pve-enterprise
+
+    # Proxmox no subscription
+    deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription
+
+    ```
+
+    - Update Proxmox VE Installation
+
+    ```bash
+
+    apt-get update && apt-get dist-upgrade
+
+    ```
 
 [^1]: [Proxmox VE Homepage](https://www.proxmox.com/de/){target=\_blank}
 [^2]: [Ventoy Homepage](https://ventoy.net/en/index.html){target=\_blank}
