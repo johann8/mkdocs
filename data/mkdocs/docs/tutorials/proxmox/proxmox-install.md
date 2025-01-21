@@ -117,7 +117,7 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
     ```
     Das zweite `bridge interface` `vmbr1` ist für die direkte Verbindung zum Storage Server PBS01 gedacht. <br>
     Wenn man manuelle Änderungen direkt in der Datei `/etc/network/interfaces` vorgenommen hat, kann man diese mit dem Befehl `ifreload -a` übernehmen. <br>
-    Wenn man Proxmox VE auf Debian installiert hat oder von einer älteren Proxmox VE-Installation auf Proxmox VE ab Version 7.0 aktualisiert hat, muss man sicher stellen, dass `ifupdown2`` installiert ist: `apt-get install ifupdown2`
+    Wenn man Proxmox VE auf Debian installiert hat oder von einer älteren Proxmox VE-Installation auf Proxmox VE ab Version 7.0 aktualisiert hat, muss man sicher stellen, dass `ifupdown2` installiert ist: `apt-get install ifupdown2`
 
     - Überprüfung der Konfiguration 
 
