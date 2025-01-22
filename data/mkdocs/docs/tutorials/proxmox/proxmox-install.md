@@ -24,9 +24,9 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
 
 ---
 
-##### USB-Stck für die Installation von Proxmox VE vorbereiten
+##### USB-Stck vorbereiten
 
-??? tip "USB-Stck vorbereiten"
+??? tip "USB-Stck für die Installation von Proxmox VE vorbereiten"
 
     Porxmox VE ISO Installer kann man von [hier]{target=\_blank} downloaden. <br>
     Mit dem Tool [`Ventoy`][Ventoy]{target=\_blank}[^2] bereitet man den USB-Stick wie folgt vor:
@@ -68,9 +68,9 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
 
     Wenn im Server mehrere Netzwerkkarten installiert sind, dann wird die aktive Netzwerkkarte mit einem grünen Punkt gekennzeichnet. Nach der erfolgreichen Installation startet der Server neu und es wird die URL angezeigt, über die man das Webinterface erreichen kann. 
 
-##### Proxmox VE Netzwerk einrichten
+##### Netzwerk einrichten
 
-??? tip "Netzwerk einrichten"
+??? tip "Proxmox VE Netzwerk einrichten"
 
     Das Netzwerk richtet man entweder über das Proxmox VE WEB-Interface oder über Shell ein. Die Netzwerk Konfiguration befindet sich in der Datei `/etc/network/interfaces`. <br>
     Während der Installation richtet Proxmox automatisch ein `bridge interface` [`vmbr0`][vmbr0]{target=\_blank}. Man kann es sich als einen virtuellen Switch vorstellen, an den die Gäste und die physischen Schnittstellen angeschlossen sind.
@@ -178,14 +178,6 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
 
     # Proxmox no subscription
     deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription
-
-    ```
-
-    - Update Proxmox VE Installation
-
-    ```bash
-
-    apt-get update && apt-get dist-upgrade
 
     ```
 
