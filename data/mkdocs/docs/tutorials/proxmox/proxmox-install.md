@@ -226,7 +226,7 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
     # Restart Server
     reboot
     ```
-#### Update Proxmox VE
+##### Update Proxmox VE
 
 ??? tip "Update Proxmox VE Installation"
 
@@ -241,15 +241,15 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
 
     ```
 
-#### Zabbix Client installieren
+##### Zabbix Client installieren
 
 ??? tip "Zabbix Client unter Proxmox VE installieren"
 
-    Die Installation und Einrichtung von Zabbix Client kann [`hier`][hier]{target=\_blank} gefunden werden.
+    Die Installation und Einrichtung von Zabbix Client kann [`hier`][hier] gefunden werden.
 
     [hier]: ../docker/zabbix/index.md
 
-#### Allgemeine Software
+##### Allgemeine Software
 
 ??? tip "Allgemeine Software unter Proxmox VE installieren und konfigurieren"
 
