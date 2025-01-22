@@ -227,6 +227,155 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
     reboot
     ```
 
+??? tip "Update Proxmox VE Installation"
+
+    Nach der Netzwerk-Konfiguration kann jetzt  Proxmox VE upgedated werden
+
+    ```bash
+    # Die Quellen neu einlesen und OS upgraden
+    apt-get update && apt-get dist-upgrade
+
+    # Server neu starten
+    reboot
+
+    ```
+
+
+??? tip "Zabbix Client unter Proxmox VE installieren"
+
+    Die Installation und Einrichtung von Zabbix Client kann [`hier`][hier]{target=\_blank} gefunden werden.
+
+    [hier]: ../docker/zabbix/index.md
+
+
+??? tip "Allgemeine Software unter Proxmox VE installieren und konfigurieren"
+
+    ```bash
+    # Software installieren
+    apt-get install bzip2 vim iftop zstd mc iotop ncdu htop linuxlogo make nvme-cli -y
+
+    # Show Netzwerkverbindungen
+    iftop -i vmbr0
+    iftop -i vmbr1
+
+    # Anzeigen, wann OS installiert wurde
+    tune2fs -l /dev/mapper/pve-root | grep 'Filesystem created:'
+
+    # Bash - am Dateiende einfügen
+    vim /etc/bash.bashrc
+    ----
+    # who am I
+    ID=$(id -u)
+
+    if [ "x$ID" = "x0" ]; then
+       if [ -f /usr/bin/linux_logo ]; then /usr/bin/linux_logo -L 2; fi
+       PS1="\[\e[91m\]\u\[\e[38;5;208m\]@\[\e[92m\]\h:\[\e[96m\]\$PWD\[\e[35m\]//$(date +"%D-%H:%M" | sed 's/\//-/g')\n\[\e[91m\][#]~> \[\e[0m\] "
+    else
+       PS1="\[\e[91m\]\u\[\e[38;5;208m\]@\[\e[92m\]\h:\[\e[96m\]\$PWD\[\e[35m\]//$(date +"%D-%H:%M" | sed 's/\//-/g')\n\[\e[93m\][$]~> \[\e[0m\] "
+    fi
+    ----
+
+    # Bash neu laden
+    su -
+
+    # Linuxlogo
+
+
+    # Editor vim einrichten
+    # Verfügbare Themen anzeigen lasse
+    ls -la /usr/share/vim/vim90/colors/
+
+    # Config ergänzen
+    vi /root/.vimrc
+    ----
+    set mouse-=a
+    syntax on
+    :color murphy
+    ----
+
+    # NVMe Command Line Interface
+    nvme list
+
+    # SMART-Status des NVMe-Gerätes
+    nvme smart-log /dev/nvme0
+    nvme smart-log /dev/nvme1 
+
+    # Zugriff auf die Fehlerprotokolle des NVMe-Gerätes
+    nvme error-log /dev/nvme0
+    nvme error-log /dev/nvme1
+
+    # display structure
+    nvme id-ns /dev/nvme1 -n 1 -H | tail -n 2
+    nvme id-ns /dev/nvme0 -n 1 -H | tail -n 2
+
+    # Setzen von mc Theme
+    # Verfügbare Themen anzeigen lassen
+    ls -la /usr/share/mc/skins/
+
+    # Theme ändern auf skin=xoria256
+    vim /root/.config/mc/ini
+    ----
+    ...
+    #skin=default
+    #skin=dark
+    #skin=darkfar
+    #skin=gotar
+    #skin=nicedark
+    #skin=sand256
+    #skin=modarin256
+    skin=xoria256
+    #skin=featured
+    ...
+    ----
+
+    # Tool btop installieren
+    mkdir /tmp/btop_tmp && cd /tmp/btop_tmp
+    VERSION=v1.4.0
+    wget https://github.com/aristocratos/btop/releases/download/${VERSION}/btop-x86_64-linux-musl.tbz
+    tar -xjvf btop-x86_64-linux-musl.tbz
+    cd btop && make install PREFIX=/usr/local
+    make setuid
+    cd /tmp
+    rm -rf btop_tmp
+
+    # NTP Server ändern
+    vim /etc/chrony/chrony.conf
+    ----
+    ...
+    # Use Debian vendor zone.
+    #pool 2.debian.pool.ntp.org iburst
+    pool de.pool.ntp.org iburst
+    ...
+    ----
+    
+    # Restart chrony Service
+    systemctl restart chronyd  
+    systemctl status chrony
+
+    # Zeitzone setzen und anzeigen lassen
+    timedatectl list-timezones |grep Berlin
+    timedatectl set-timezone Europe/Berlin
+    timedatectl status
+    journalctl --since -1h -u chrony
+
+    # Syslog wurde journalctl durch ersetzt
+    journalctl --since=2025-01-12
+    journalctl --since=today
+    journalctl --since=yesterday
+    journalctl --system
+
+    journalctl -u meshagent
+    journalctl -u postfix
+    journalctl -u bareos-filedaemon
+
+    
+    # Alle systemd Services anzeigen lassen
+    systemctl list-units -t service --state=running
+    systemctl list-units -t service
+
+    ```
+
+
 [^1]: [Proxmox VE Homepage](https://www.proxmox.com/de/){target=\_blank}
 [^2]: [Ventoy Homepage](https://ventoy.net/en/index.html){target=\_blank}
 
