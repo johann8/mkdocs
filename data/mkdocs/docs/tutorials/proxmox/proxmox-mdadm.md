@@ -59,6 +59,23 @@ Als `Storage` für die VMs wird ein [`RAID1`][RAID1]{target=\_blank} aus zwei `E
 
     ```
 
+        !!! info "Note"
+
+            Man kann den Synchronisierungsstatus mit Hilfe von `screen` und `watch` viel besser im Auge behalten
+
+            ```bash
+            # screen install
+            apt-get install screen
+
+            # Screen starten: mdadm ist der Name von screen Session
+            screen -S mdadm
+            
+            # Synchronisierungsstatus alle 30 sec aktualisieren
+            watch -n 30 cat /proc/mdstat
+
+            watch -n 30 mdadm -D /dev/md0
+            ```
+
     - Neue Partition auf dem gesamten Raid Volume erstellen
 
     ```bash
@@ -103,6 +120,16 @@ Als `Storage` für die VMs wird ein [`RAID1`][RAID1]{target=\_blank} aus zwei `E
     # lvconvert --type thin-pool vmstorage/vmdata
 
     ```
+
+    !!! info "Note"
+
+        Man kann auch ein **LVM**-Volume in ein **LVM**-Thin Volume nachträglich konventieren  I
+
+        ```bash
+        lvconvert --type thin-pool vmstorage/vmdata
+
+        ```
+
     - LVM Thin in der Proxmox VE WebGUI als Storage einrichten
 
     - Unter Rechenzentrum -> Storage -> Button "Hinzufügen" -> "LVM thin" klicken
@@ -121,8 +148,6 @@ Als `Storage` für die VMs wird ein [`RAID1`][RAID1]{target=\_blank} aus zwei `E
              content images,rootdir
     ----
     ```
-
-
 
 [Proxmox VE]: https://de.wikipedia.org/wiki/Proxmox_VE
 [MDADM]: https://de.wikipedia.org/wiki/Mdadm
