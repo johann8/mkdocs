@@ -41,6 +41,7 @@ Als `Storage` für die VMs wird ein [`RAID1`][RAID1]{target=\_blank} aus zwei `E
     ----
     ```
 ##### RAID1 einrichten
+
 ??? tip "Software MDADM installieren und RAID1 einrichten"
 
     - Software MDADM installieren und RAID1 erstellen
@@ -130,11 +131,17 @@ Als `Storage` für die VMs wird ein [`RAID1`][RAID1]{target=\_blank} aus zwei `E
 
         ```
 
-    - LVM Thin in der Proxmox VE WebGUI als Storage einrichten
+##### LVM-Thin Storage 
+
+??? tip "LVM Thin in der Proxmox VE WebGUI als Storage einrichten"
+
+    - Anmeldung über Proxmox VE WebGUI
 
     - Unter Rechenzentrum -> Storage -> Button "Hinzufügen" -> "LVM thin" klicken
     
     - Form wie auf dem Bild unten ausführen
+
+    ![Proxmox LVM-Thin Storage](../../assets/screenshots/pve_lvm-thin_stotage.jpg "Proxmox VE LVM-Thin Storage"){width=500}
 
     - Die Konfiguration wird in der Datei `/etc/pve/storage.cfg` gespeichert
 
