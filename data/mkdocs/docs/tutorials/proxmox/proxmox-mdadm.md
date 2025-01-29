@@ -133,11 +133,11 @@ Als `Storage` für die VMs wird ein [`RAID1`][RAID1]{target=\_blank} aus zwei `E
 
 ##### LVM-Thin Storage 
 
-??? tip "LVM Thin in der Proxmox VE WebGUI als Storage einrichten"
+??? tip "LVM Thin Storage unter Proxmox VE WebGUI einrichten"
 
     - Anmeldung über Proxmox VE WebGUI
 
-    - Unter Rechenzentrum -> Storage -> Button "Hinzufügen" -> "LVM thin" klicken
+    - Unter Datacenter -> Storage -> Button "Hinzufügen" -> "LVM thin" klicken
     
     - Form wie auf dem Bild unten ausführen
 
