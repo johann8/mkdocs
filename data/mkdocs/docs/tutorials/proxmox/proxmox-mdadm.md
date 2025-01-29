@@ -59,22 +59,22 @@ Als `Storage` für die VMs wird ein [`RAID1`][RAID1]{target=\_blank} aus zwei `E
 
     ```
 
-        !!! info "Note"
+    !!! info "Note"
 
-            Man kann den Synchronisierungsstatus mit Hilfe von `screen` und `watch` viel besser im Auge behalten
+        Man kann den Synchronisierungsstatus mit Hilfe von `screen` und `watch` viel besser im Auge behalten
 
-            ```bash
-            # screen install
-            apt-get install screen
+        ```bash
+        # screen install
+        apt-get install screen
 
-            # Screen starten: mdadm ist der Name von screen Session
-            screen -S mdadm
+        # Screen starten: mdadm ist der Name von screen Session
+        screen -S mdadm
             
-            # Synchronisierungsstatus alle 30 sec aktualisieren
-            watch -n 30 cat /proc/mdstat
+        # Synchronisierungsstatus alle 30 sec aktualisieren
+        watch -n 30 cat /proc/mdstat
 
-            watch -n 30 mdadm -D /dev/md0
-            ```
+        watch -n 30 mdadm -D /dev/md0
+        ```
 
     - Neue Partition auf dem gesamten Raid Volume erstellen
 
