@@ -10,7 +10,7 @@ tags: [zabbix, docker, monitoring]
 
 ##### Zabbix Tipps
 
-??? tip ""
+??? tip " "
 
     ##### Die Größe der Datenbank reduzieren
 
@@ -42,27 +42,24 @@ tags: [zabbix, docker, monitoring]
     === "docker compose (Plugin)"
         ```bash
         cd /opt/zabbix-docker
-        docker compose zabbix-docker
+        docker compose down zabbix-server
 
         # Zeigt Status an
         docker compose ps
-
         ```
 
     === "docker-compose (Standalone)"
         ```bash
         cd /opt/zabbix-docker
-        docker-compose zabbix-docker
+        docker-compose down zabbix-server
 
         # Zeigt Status an
         docker-compose ps
-
         ```
     - Passwort der Datenbank in der Variable speichern
 
     ```bash
     MYSQL_ROOT_PASSWORD=$(cat env_vars/.MYSQL_ROOT_PASSWORD)
- 
     ```
     - Einige Tabelen der Zabbix Datenbank leeren
 
@@ -104,7 +101,6 @@ tags: [zabbix, docker, monitoring]
 
         # Zeigt Logdaten an
         docker-compose logs -f
-
         ```
     - Alle laufende COntainer anzeigen lassen
 
@@ -116,7 +112,6 @@ tags: [zabbix, docker, monitoring]
 
     ```bash
     docker system prune
-
     ```
 
     - Service Monit wieder starten
@@ -124,5 +119,4 @@ tags: [zabbix, docker, monitoring]
     ```bash
     systemctl start monit.service
     ncdu /opt/zabbix-docker/
-
     ```
