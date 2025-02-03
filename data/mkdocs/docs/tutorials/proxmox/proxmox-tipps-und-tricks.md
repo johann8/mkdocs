@@ -14,17 +14,19 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
 
 ??? tip "Postfix auf Proxmox VE Host einrichten"
 
-    - Postfix installieren
+    - `Postfix` installieren
 
     ```bash
     apt-get install postfix
+    
     ```
-    - Postfix konfigurieren
+    - `Postfix` konfigurieren
 
     ```bash
     # vim /etc/postfix/
     
     ```
+
 [Postfix]: https://www.postfix.org/
 [Proxmox VE]: https://de.wikipedia.org/wiki/Proxmox_VE
 
