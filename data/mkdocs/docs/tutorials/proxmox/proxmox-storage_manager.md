@@ -67,33 +67,35 @@ Als [`RAID controller`][RAID controller]{target=\_blank} dient im Proxmox Host e
     ln -s /usr/StorMan/arcconf ./arcconf
 
     # log file
-    tail -f /var/log/syslog
     journalctl --since=today
-
-    https://youripaddress:8443/
 
     cat /usr/StorMan/config/server.properties
     ----
-    #Server.properties file for GUI config parameters
-    cimport=5988
-    webserverport=8443
+    #Tue Jan 14 11:51:46 CET 2025
     cimomip=127.0.0.1
     comm_protocol=http
+    consoleonly=false
+    desktop_application=false
+    event_listener_port=49161
     event_protocol=http
     interop_namespace=root/interop
-    event_listener_port=-1
-    vmware_mode=false
     localip=
-    consoleonly=false
+    localmode=false
+    redfish_event_listener_port=49162
+    vmware_mode=false
+    webserverport=8443
     ----
 
+    # Ob die Dienste laufen
     systemctl list-units -t service --state=running
     systemctl list-units -t service 
 
-    /etc/init.d/stor_redfishserver status (start|stop|restart|status)
-    /etc/init.d/stor_tomcat status (start|stop|restart|status)
+    # Steuerung der Diensten
+    /etc/init.d/stor_redfishserver status   # (start|stop|restart|status)
+    /etc/init.d/stor_tomcat status          # (start|stop|restart|status)
 
-    https://192.168.1.225:8443/maxview/manager/login.xhtml
+    # Web Login
+    https://192.168.18.225:8443/maxview/manager/login.xhtml
 
     ```
 
