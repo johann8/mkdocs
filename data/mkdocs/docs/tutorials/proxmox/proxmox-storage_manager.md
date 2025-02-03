@@ -10,7 +10,7 @@ tags: [proxmox, mdadm, raid, lvm]
 
 Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`maxView Storage Manager`][maxView Storage Manager]{target=\_blank}[^1] unter [`Proxmox VE`][Proxmox VE]{target=\_blank}[^2]
 
-Als [`RAID controller`][RAID controller] dient im Proxmox Host ein Controller von [`Adaptec`][Adaptec]{target=\_blank}.
+Als [`RAID controller`][RAID controller]{target=\_blank} dient im Proxmox Host ein Controller von [`Adaptec`][Adaptec]{target=\_blank}.
 
 ##### Adaptec RAID controler
 
@@ -48,6 +48,7 @@ Als [`RAID controller`][RAID controller] dient im Proxmox Host ein Controller vo
 
     ```bash
     apt-get purge storman
+
     ```
 
     - maxView Storage Manager installieren
@@ -94,12 +95,12 @@ Als [`RAID controller`][RAID controller] dient im Proxmox Host ein Controller vo
 
     https://192.168.1.225:8443/maxview/manager/login.xhtml
 
-    ´´´
-
+    ```
 
 
 [maxView Storage Manager]: https://developerhelp.microchip.com/xwiki/bin/view/products/data-center-solutions/adapatec-storage-adapters/maxview-storage-manager/
 [Proxmox VE]: https://de.wikipedia.org/wiki/Proxmox_VE
+[RAID controller]: https://en.wikipedia.org/wiki/Disk_array_controller
 [Adaptec]: https://en.wikipedia.org/wiki/Adaptec
 [WinSCP]: https://winscp.net/eng/download.php 
 
