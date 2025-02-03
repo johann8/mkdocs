@@ -23,8 +23,25 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
     - `Postfix` konfigurieren
 
     ```bash
-    # vim /etc/postfix/
-    
+    # Zu main.cf hinzufügen
+    # vim /etc/postfix/main.cf
+    ----
+    ...
+    # jhahn changed am 12.01.2025
+    #mydestination = $myhostname, localhost.$mydomain, localhost
+    #relayhost =
+    ...
+    # jhahn changed am 12.01.2025
+    relayhost = [smtp.wassermanngruppe.de]:587
+    smtp_use_tls = yes
+    smtp_sasl_auth_enable = yes
+    smtp_sasl_security_options = noanonymous
+    smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+    smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
+    # -------------- Generic maps
+    smtp_generic_maps = hash:/etc/postfix/generic
+    ...
+    ----
     ```
 
 [Postfix]: https://www.postfix.org/
