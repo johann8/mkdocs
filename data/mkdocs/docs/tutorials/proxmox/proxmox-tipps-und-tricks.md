@@ -20,6 +20,7 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
     apt-get install postfix
     
     ```
+
     - `Postfix` konfigurieren
 
     === "main.cf"
