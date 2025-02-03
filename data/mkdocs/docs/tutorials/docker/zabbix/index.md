@@ -10,9 +10,9 @@ tags: [zabbix, docker, monitoring]
 
 ##### Zabbix Tipps
 
-??? tip " "
+??? tip "Die Größe der Zabbix Datenbank reduzieren"
 
-    ##### Die Größe der Datenbank reduzieren
+    #### Die Größe der Datenbank reduzieren
 
     - Die Größe der Tabelen anzeigen lassen
 
@@ -102,7 +102,7 @@ tags: [zabbix, docker, monitoring]
         # Zeigt Logdaten an
         docker-compose logs -f
         ```
-    - Alle laufende COntainer anzeigen lassen
+    - Alle laufende Container anzeigen lassen
 
     ```bash
     ctop
