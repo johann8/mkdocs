@@ -51,6 +51,7 @@ nav:
       - 'Proxmox MDADM': 'tutorials/proxmox/proxmox-mdadm.md'
       - 'Proxmox Storage Manager': 'tutorials/proxmox/proxmox-storage_manager.md'
       - 'Proxmox Umzug auf neue hardware': 'tutorials/proxmox/proxmox-umzug-neue-hardware.md'
+      - 'Proxmox Postfix': 'tutorials/proxmox/proxmox-tipps-und-tricks.md'
     - 'Windows':
       - 'Tipps und Tricks': 'tutorials/windows/tipps-und-tricks.md'
   - 'Privacy': 'privacy.md'
