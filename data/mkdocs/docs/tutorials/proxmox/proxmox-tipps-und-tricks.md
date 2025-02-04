@@ -3,7 +3,7 @@ Title: Proxmox Tipps und Tricks
 Summary: Proxmox Tipps und Tricks
 Authors: Johann Hahn
 Date:    Februar 03, 2025
-tags: [proxmox, postfix, tipps, ipmi]
+tags: [proxmox, postfix, tips, ipmi, arcconf]
 ---
 
 # :fontawesome-brands-linux: Proxmox VE Tipps und Tricks
