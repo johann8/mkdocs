@@ -3,7 +3,7 @@ Title: Proxmox Tipps und Tricks
 Summary: Proxmox Tipps und Tricks
 Authors: Johann Hahn
 Date:    Februar 03, 2025
-tags: [proxmox, postfix, tipps, tricks]
+tags: [proxmox, postfix, tipps, ipmi]
 ---
 
 # :fontawesome-brands-linux: Proxmox VE Tipps und Tricks
@@ -71,7 +71,7 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
 
 ??? tip "IPMI auf Proxmox VE Host einrichten"
 
-    [`IPMI`][IPMI]{target=\_blank}[^3]: ist eine standardisierte Schnittstelle in Computer-Hardware und -Firmware, über die Rechner auf Hardwareebene ferngesteuert überwacht und verwaltet werden können, auch wenn sie ausgeschaltet sind oder kein Betriebssystem installiert ist. Das Passwort für `ADMIN` User ist direkt auf dem `Motherboard` gespeichert. Mit dem Tool `IPMICFG` werden wir einen neuen User einrichten und das Password vom ADMIN User ändern.
+    [`IPMI`][IPMI]{target=\_blank}[^3]: ist eine standardisierte Schnittstelle in Computer-Hardware und -Firmware, über die Rechner auf Hardwareebene ferngesteuert überwacht und verwaltet werden können, auch wenn sie ausgeschaltet sind oder kein Betriebssystem installiert ist. Das Passwort für `ADMIN` User ist direkt auf dem `Motherboard` gespeichert. Mit dem Tool `IPMICFG` werden wir einen neuen User einrichten und das `Passwort` von User `ADMIN` ändern.
 
     - `IPMICFG` installieren: IPMICFG auf den Windows Rechner [`herunterladen`](https://www.supermicro.com/en/support/resources/downloadcenter/smsdownload){target=\_blank} und mit Hilfe von [`WinSCP`][WinSCP]{target=\_blank} nach `/tmp` auf den `Proxmox Host` kopieren.
 
@@ -113,10 +113,51 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
     - Login über IPMI Web-Interface
 
     ```
-    URL: https://192.168.18.254
+    URL: https://192.168.xxx.254
     User: admin123
     PW: MySuperPassword135
     ```
+    - Einige Befehle
+
+    ```bash
+    # show IP and MAC
+    ipmicfg -m
+    ----
+    IP=192.168.xxx.254
+    MAC=3C:EC:EF:E8:2C:11
+    ----
+
+    # show subnet mask
+    ipmicfg -k
+    ----
+    Subnet Mask=255.255.255.0
+    ----
+
+    # show gateway 
+    ipmicfg -g
+    ----
+    Gateway=192.168.xxx.1
+    ----
+
+    # show help
+    ipmicfg -user add help
+    -------------------
+    Command(s):
+     -user list                 Lists user privileges.
+     -user help                 Shows a user privilege code.
+     -user add <user id> <name> Adds a user.
+      <password> <privilege>
+     -user del <user id>        Deletes users.
+     -user level <user id>      Updates user privileges.
+      <privilege>
+     -user setpwd <user id>     Updates a user password.
+      <password>
+    ----
+
+    # show motherboard info
+    dmidecode -t 2
+
+   ```
 
 [IPMI]: https://www.supermicro.com/en/support/resources/downloadcenter/smsdownload 
 [WinSCP]: https://winscp.net/eng/download.php
