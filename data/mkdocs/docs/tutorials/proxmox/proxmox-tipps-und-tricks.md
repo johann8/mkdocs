@@ -67,9 +67,9 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
 [Postfix]: https://www.postfix.org/
 [Proxmox VE]: https://de.wikipedia.org/wiki/Proxmox_VE
 
-#### Proxmox VE - Intelligent Platform Management Interface (IPMI) einrichten
+#### Proxmox VE - IPMI
 
-??? tip "IPMI auf Proxmox VE Host einrichten"
+??? tip "Intelligent Platform Management Interface (IPMI) auf Proxmox VE Host einrichten"
 
     [`IPMI`][IPMI]{target=\_blank}[^3]: ist eine standardisierte Schnittstelle in Computer-Hardware und -Firmware, über die Rechner auf Hardwareebene ferngesteuert überwacht und verwaltet werden können, auch wenn sie ausgeschaltet sind oder kein Betriebssystem installiert ist. Das Passwort für `ADMIN` User ist direkt auf dem `Motherboard` gespeichert. Mit dem Tool `IPMICFG` werden wir einen neuen User einrichten und das `Passwort` von User `ADMIN` ändern.
 
@@ -167,9 +167,9 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
 [WinSCP]: https://winscp.net/eng/download.php
 
 
-#### Proxmox VE - ACCONF Command Line Utility
+#### Proxmox VE - ARCCONF
 
-??? tip "Umgang mit dem ACCONF Command Line Utility"
+??? tip "Umgang mit dem ARCCONF Command Line Utility"
 
     - Einige Beispiele
 
