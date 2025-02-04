@@ -160,7 +160,7 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
 
     # show motherboard info
     dmidecode -t 2
-   ```
+    ```
 
 
 [IPMI]: https://www.supermicro.com/en/support/resources/downloadcenter/smsdownload 
