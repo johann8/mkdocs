@@ -84,8 +84,8 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
     mv /tmp/IPMICFG_1.35.2_build.240627/Linux/64bit/IPMICFG-Linux.x86_64 ./
     mv IPMICFG-Linux.x86_64 ipmicfg
     chmod 0700 ipmicfg
-
     ```
+
     - Neuen User `admin123` mit dem Tool `IPMICFG` hinzufügen
 
     ```bash
@@ -102,6 +102,7 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
           3 | adminJH          | Administrator   | Yes
     ----
     ```
+
     - Passwort vom User `ADMIN` ändern 
 
     ```bash
@@ -112,12 +113,15 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
 
     - Login über IPMI Web-Interface
 
-    ```
+
+    ```bash
     URL: https://192.168.xxx.254
     User: admin123
     PW: MySuperPassword135
+
     ```
     - Einige Befehle
+
 
     ```bash
     # show IP and MAC
@@ -158,6 +162,7 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
     dmidecode -t 2
 
    ```
+
 
 [IPMI]: https://www.supermicro.com/en/support/resources/downloadcenter/smsdownload 
 [WinSCP]: https://winscp.net/eng/download.php
