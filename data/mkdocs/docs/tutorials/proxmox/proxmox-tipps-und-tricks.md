@@ -118,8 +118,8 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
     URL: https://192.168.xxx.254
     User: admin123
     PW: MySuperPassword135
-
     ```
+
     - Einige Befehle
 
 
@@ -160,7 +160,6 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
 
     # show motherboard info
     dmidecode -t 2
-
    ```
 
 
