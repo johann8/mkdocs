@@ -67,7 +67,60 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
 [Postfix]: https://www.postfix.org/
 [Proxmox VE]: https://de.wikipedia.org/wiki/Proxmox_VE
 
+#### Proxmox VE - Intelligent Platform Management Interface (IPMI) einrichten
+
+??? tip "IPMI auf Proxmox VE Host einrichten"
+
+    [`IPMI`][IPMI]{target=\_blank}[^3]: ist eine standardisierte Schnittstelle in Computer-Hardware und -Firmware, über die Rechner auf Hardwareebene ferngesteuert überwacht und verwaltet werden können, auch wenn sie ausgeschaltet sind oder kein Betriebssystem installiert ist. Das Passwort für `ADMIN` User ist direkt auf dem `Motherboard` gespeichert. Mit dem Tool `IPMICFG` werden wir einen neuen User einrichten und das Password vom ADMIN User ändern.
+
+    - `IPMICFG` installieren: IPMICFG auf den Windows Rechner [`herunterladen`](https://www.supermicro.com/en/support/resources/downloadcenter/smsdownload){target=\_blank} und mit Hilfe von [`WinSCP`][WinSCP]{target=\_blank} nach `/tmp` auf den `Proxmox Host` kopieren.
+
+    - SSH Login auf dem `Proxmox Host`
+
+    ```bash
+    cd /tmp 
+    unzip IPMICFG_1.35.2_build.240627.zip
+    cd /usr/local/bin
+    mv /tmp/IPMICFG_1.35.2_build.240627/Linux/64bit/IPMICFG-Linux.x86_64 ./
+    mv IPMICFG-Linux.x86_64 ipmicfg
+    chmod 0700 ipmicfg
+
+    ```
+    - Neuen User `admin123` mit dem Tool `IPMICFG` hinzufügen
+
+    ```bash
+    # 3 - User-ID
+    # 4 - privilege (Administrator)
+    ipmicfg -user add 3 admin123 MySuperPassword135 4
+    ipmicfg -user list
+    ----
+    Maximum number of Users          : 16
+    Count of currently enabled Users : 2
+    User ID | User Name        | Privilege Level | Enable
+    ------- | ---------        | --------------- | ------
+          2 | ADMIN            | Administrator   | Yes
+          3 | adminJH          | Administrator   | Yes
+    ----
+    ```
+    - Passwort vom User `ADMIN` ändern 
+
+    ```bash
+    # Set password for user ADMIN
+    # 2 - User-ID
+    ipmicfg -user setpwd 2 MySuperPassword789
+    ```
+
+    - Login über IPMI Web-Interface
+
+    ```
+    URL: https://192.168.18.254
+    User: admin123
+    PW: MySuperPassword135
+    ```
+
+[IPMI]: https://www.supermicro.com/en/support/resources/downloadcenter/smsdownload 
+[WinSCP]: https://winscp.net/eng/download.php
 
 [^1]: [Postfix](https://de.wikipedia.org/wiki/Postfix_(Mail_Transfer_Agent)){target=\_blank}
 [^2]: [Proxmox VE Homepage](https://www.proxmox.com/de/){target=\_blank}
-
+[^3]: [IPMI](https://de.wikipedia.org/wiki/Intelligent_Platform_Management_Interface){target=\_blank}
