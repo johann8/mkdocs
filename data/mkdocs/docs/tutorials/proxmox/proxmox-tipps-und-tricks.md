@@ -166,6 +166,48 @@ Dieser Artikel beinhaltet eine Anleitung zur Einrichtung von [`Postfix`][Postfix
 [IPMI]: https://www.supermicro.com/en/support/resources/downloadcenter/smsdownload 
 [WinSCP]: https://winscp.net/eng/download.php
 
+
+#### Proxmox VE - ACCONF Command Line Utility
+
+??? tip "Umgang mit dem ACCONF Command Line Utility"
+
+    - Einige Beispiele
+
+    ```bash
+
+    # show all config
+    arcconf getconfig 1
+
+    # show controller status
+    arcconf getconfig 1 | grep Status
+
+    # controller information
+    arcconf list
+
+    # show drive status
+    arcconf getconfig 1 pd |grep -iE "#|name|state|serial|firmware"
+
+    # Logical device information
+    arcconf getconfig 1 ld
+
+    # Controller information
+    arcconf getconfig 1 ad
+
+    # Event log
+    arcconf GETLOGS 1 EVENT tabular
+
+    # show device status
+    arcconf getconfig 1 pd|egrep "Device #|State\>|Reported Location|Reported Channel|S.M.A.R.T. warnings"
+
+    # show array status
+    arcconf getconfig 1 PD | grep -i 'state\|Array'
+
+    # show smart staus of drives
+    arcconf getsmartstats 1  tabular|grep -i SmartStats -A 5
+
+    ```
+
+
 [^1]: [Postfix](https://de.wikipedia.org/wiki/Postfix_(Mail_Transfer_Agent)){target=\_blank}
 [^2]: [Proxmox VE Homepage](https://www.proxmox.com/de/){target=\_blank}
 [^3]: [IPMI](https://de.wikipedia.org/wiki/Intelligent_Platform_Management_Interface){target=\_blank}
