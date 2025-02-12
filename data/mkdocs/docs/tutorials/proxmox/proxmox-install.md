@@ -246,17 +246,17 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
 ??? tip "Allgemeine Software unter Proxmox VE installieren und konfigurieren"
 
     ```bash
-    # Software installieren
+    ### Software installieren
     apt-get install bzip2 vim iftop zstd mc iotop ncdu htop linuxlogo make nvme-cli -y
 
-    # Show Netzwerkverbindungen
+    ### Show Netzwerkverbindungen
     iftop -i vmbr0
     iftop -i vmbr1
 
-    # Anzeigen, wann OS installiert wurde
+    ### Anzeigen, wann OS installiert wurde
     tune2fs -l /dev/mapper/pve-root | grep 'Filesystem created:'
 
-    # Bash - am Dateiende einfügen
+    ### Bash - am Dateiende einfügen
     vim /etc/bash.bashrc
     ----
     # who am I
@@ -273,10 +273,19 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
     # Bash neu laden
     su -
 
-    # Linuxlogo
+    ### Linuxlogo
+    apt-get install linuxlogo
 
+    # Verfügbare Logos anzeigen lassen
+    linuxlogo -L list
 
-    # Editor vim einrichten
+    # FreeBSD Logo anzeigen lassen
+    linux_logo -L 2
+
+    # Logo setze ich in der Datei /etc/bash.bashrc
+    if [ -f /usr/bin/linux_logo ]; then /usr/bin/linux_logo -L 2; fi
+
+    ### Editor vim einrichten
     # Verfügbare Themen anzeigen lasse
     ls -la /usr/share/vim/vim90/colors/
 
@@ -288,7 +297,8 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
     :color murphy
     ----
 
-    # NVMe Command Line Interface
+    ### NVMe Command Line Interface
+    # NVME Device anzeigen lassen
     nvme list
 
     # SMART-Status des NVMe-Gerätes
@@ -303,7 +313,7 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
     nvme id-ns /dev/nvme1 -n 1 -H | tail -n 2
     nvme id-ns /dev/nvme0 -n 1 -H | tail -n 2
 
-    # Setzen von mc Theme
+    ### Setzen von mc Theme
     # Verfügbare Themen anzeigen lassen
     ls -la /usr/share/mc/skins/
 
@@ -323,7 +333,7 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
     ...
     ----
 
-    # Tool btop installieren
+    ### Tool btop installieren
     mkdir /tmp/btop_tmp && cd /tmp/btop_tmp
     VERSION=v1.4.0
     wget https://github.com/aristocratos/btop/releases/download/${VERSION}/btop-x86_64-linux-musl.tbz
@@ -333,12 +343,11 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
     cd /tmp
     rm -rf btop_tmp
 
-    # NTP Server ändern
+    ### NTP Server ändern
     vim /etc/chrony/chrony.conf
     ----
     ...
-    # Use Debian vendor zone.
-    #pool 2.debian.pool.ntp.org iburst
+    # Pool von NTP Server setzen
     pool de.pool.ntp.org iburst
     ...
     ----
@@ -353,7 +362,8 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
     timedatectl status
     journalctl --since -1h -u chrony
 
-    # Syslog wurde journalctl durch ersetzt
+    ### Syyslog wurde journalctl durch ersetzt
+    # Einige Beispiele
     journalctl --since=2025-01-12
     journalctl --since=today
     journalctl --since=yesterday
