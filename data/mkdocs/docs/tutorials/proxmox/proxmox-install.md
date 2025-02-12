@@ -241,6 +241,15 @@ Proxmox Virtual Environment ist eine komplette Open Source-Virtualisierungsplatt
 
     [hier]: ../docker/zabbix/index.md
 
+##### OCS Inventory Client installieren
+
+??? tip "OCS Inventory Client unter Proxmox VE installieren"
+
+    Die Installation und Einrichtung von OCS Inventory Client kann [`hier`][hier]{target=\_blank} gefunden werden.
+
+    [hier]: https://github.com/johann8/ocs-alpine?tab=readme-ov-file#install-ocsinventory-client-on-debianubuntu
+
+
 ##### Allgemeine Software
 
 ??? tip "Allgemeine Software unter Proxmox VE installieren und konfigurieren"
