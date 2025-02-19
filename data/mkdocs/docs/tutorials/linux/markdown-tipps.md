@@ -383,26 +383,28 @@ The original [pvekclean github page][pvekclean-url]{target=\_blank}
 
 ---
 
-### Method 2 - Traditional (Windows 7 and later)
+## Method 2 - Traditional (Windows 7 and later)
 
 <details>
   <summary>Click here for info</summary>
 
-1.   Download the file using the links provided below.  
-`https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/heads/master.zip`  
-or  
-`https://git.activated.win/massgrave/Microsoft-Activation-Scripts/archive/master.zip`
+1. Download the file using the links provided below `https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/heads/master.zip`  
+
 2.   Right-click on the downloaded zip file and extract
+
 3.   In the extracted folder, find the folder named `All-In-One-Version`
+
 4.   Run the file named `MAS_AIO.cmd`
+
 5.   You will see the activation options, follow the on-screen instructions.
+
 6.   That's all.
 
 </details>
 
 ---
 
-### Not working ❓
+## Not working ❓
 
 - If you are **unable to launch MAS** using the PowerShell method, please refer to **Method 2** listed above.
 - If MAS is launched and the script shows any errors, check for any troubleshooting steps mentioned in blue color and try to follow those.
@@ -410,11 +412,11 @@ or
 
 ---
 
-> [!NOTE]
->
-> - The IRM command in PowerShell downloads a script from a specified URL, and the IEX command executes it.
-> - Always double-check the URL before executing the command and verify the source if manually downloading files.
-> - Be cautious, as some spread malware disguised as MAS by using different URLs in the IRM command.
+!!! note ""
+    >
+    > - The IRM command in PowerShell downloads a script from a specified URL, and the IEX command executes it.
+    > - Always double-check the URL before executing the command and verify the source if manually downloading files.
+    > - Be cautious, as some spread malware disguised as MAS by using different URLs in the IRM command.
 
 ---
 
