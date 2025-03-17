@@ -62,8 +62,14 @@ Bevor Sie `Traefik` installieren, sollten Sie einige Voraussetzungen überprüfe
         echo ${TRAEFIK_PASSWORD} > ${DOCKERDIR}/traefik_dashboard_password
         echo $(htpasswd -nb ${USER_NAME} ${TRAEFIK_PASSWORD}) | sed -e s/\\$/\\$\\$/g
 
-        # Result - Will be in treafik config file inserted (data/conf/dynamic_conf.yml) 
+        # Result - Will be in treafik secret file inserted (data/secrets/basic_auth_credentials) 
         user1:$$apr1$$ht6O3iSE$$5YxApoPCqeGyMNRsCvXwh/
+
+        # add to file basic_auth_credentials
+        vim  ${DOCKERDIR}/data/secrets/basic_auth_credentials
+        ----
+        user1:$$apr1$$ht6O3iSE$$5YxApoPCqeGyMNRsCvXwh/
+        ----
         ```
     === "Download config files"
         ```bash
