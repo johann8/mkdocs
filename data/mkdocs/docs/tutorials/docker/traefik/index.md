@@ -115,24 +115,36 @@ Bevor Sie `Traefik` installieren, sollten Sie einige Voraussetzungen überprüfe
 
         ``` yaml
         ---
+        #################### NETWORKS
         networks:
-          proxy:
+          default:
             driver: bridge
-            enable_ipv6: true
+          proxy:
             external: true
+            enable_ipv6: true
+            ipam:
+              config:
+                - subnet: ${SUBNET}.0/24
 
+        #################### SECRETS
+        secrets:
+          basic_auth_credentials:
+            file: ${DOCKERDIR}/data/secrets/basic_auth_credentials
+
+        #################### SERVICES
         services:
-
         #
         ### === Traefik Container ===
         #
-
           traefik:
             image: traefik:latest
             container_name: traefik
             restart: unless-stopped
             security_opt:
               - no-new-privileges:true
+            networks:
+              proxy:
+                ipv4_address: ${SUBNET}.254
             ports:
               - target: 80
                 published: 80
@@ -150,6 +162,9 @@ Bevor Sie `Traefik` installieren, sollten Sie einige Voraussetzungen überprüfe
               - PUID=$PUID
               - PGID=$PGID
               - TZ=$TZ
+              - HTPASSWD_FILE=/run/secrets/basic_auth_credentials                        # HTTP Basic Auth Credentials
+            secrets:
+              - basic_auth_credentials
             healthcheck:
               test: ["CMD", "traefik", "healthcheck", "--ping"]
               interval: 20s
@@ -172,7 +187,7 @@ Bevor Sie `Traefik` installieren, sollten Sie einige Voraussetzungen überprüfe
               - "traefik.http.routers.traefik-secure.tls=true"
               - "traefik.http.routers.traefik-secure.tls.certresolver=production"        # für eigene Zertifikate
               - "traefik.http.routers.traefik-secure.service=api@internal"
-              - "traefik.http.routers.traefik-secure.middlewares=rate-limit@file,secHeaders@file,traefik-auth,autodetectContenttype@file"
+              - "traefik.http.routers.traefik-secure.middlewares=rate-limit@file,secHeaders@file,traefik-basic-auth@file,autodetectContenttype@file"
               #- "traefik.http.routers.traefik-secure.middlewares=rate-limit@file,secHeaders@file,authelia@docker"
               # helthcheck
               - "traefik.http.routers.pingweb.rule=PathPrefix(`/ping`)"
@@ -182,7 +197,6 @@ Bevor Sie `Traefik` installieren, sollten Sie einige Voraussetzungen überprüfe
         #
         ### === Certdumper Container ===
         #
-
           certdumper:
             image: humenius/traefik-certs-dumper
             container_name: certdumper
