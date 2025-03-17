@@ -213,15 +213,26 @@ Bevor Sie `Traefik` installieren, sollten Sie einige Voraussetzungen überprüfe
     === ".env"
 
         ``` yaml
+        #
         ### === SYSTEM ===
+        #
         TZ=Europe/Berlin
         DOCKERDIR=/opt/traefik
         PUID=1000
         PGID=1000
 
+        #
         ### === Network ===
+        #
         DOMAINNAME=myfirma.de
         HOSTNAME01=traefik
+        SUBNET="172.18.0"
+
+        #
+        ### === Basic Auth ===
+        #
+        # User: user1
+        # PW: Hz9yy{7fU{7Nvbr}qk%(        
         ```
 
     === "data/conf/traefik.yml"
