@@ -48,7 +48,9 @@ Bevor Sie `Traefik` installieren, sollten Sie einige Voraussetzungen überprüfe
         touch ${DOCKERDIR}/data/config/acme.json
         chmod 600 ${DOCKERDIR}/data/config/acme.json
         touch ${DOCKERDIR}/data/secrets/basic_auth_credentials
-        chmod 0600 /opt/traefik/data/secrets/basic_auth_credentials
+        chmod 0600 ${DOCKERDIR}/data/secrets/basic_auth_credentials
+        touch ${DOCKERDIR}/.env
+        chmod 0600 ${DOCKERDIR}/.env
         cd ${DOCKERDIR}
         tree -d -L 3 ${DOCKERDIR}
         ```
