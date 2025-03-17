@@ -480,14 +480,19 @@ Bevor Sie `Traefik` installieren, sollten Sie einige Voraussetzungen überprüfe
     docker-compose logs -f
     ```
 
+!!! info "Einige Tipps"
+
+     # show secret file
+     docker compose exec traefik ls -la /var/run/secrets/
+
 #### Seite aufrufen
 
 Wenn keine Fehlermeldungen erschienen sind kann man die Startseite von Traefik aufrufen.
 
 !!! abstract "Die Anmeldedaten für `Traefik Dashboard`"
 
-	- **URL**: https://traefik.myfirma.de
-	- **User**: user1
-	- **Password**: (cat /opt/traefik/traefik_dashboard_password)
+    - **URL**: https://traefik.myfirma.de
+    - **User**: user1
+    - **Password**: (cat /opt/traefik/traefik_dashboard_password)
 
-	*Benutzen Sie die Anmeldedaten, die Sie generiert haben.*
+    *Benutzen Sie die Anmeldedaten, die Sie generiert haben.*
