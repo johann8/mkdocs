@@ -397,6 +397,14 @@ Bevor Sie `Traefik` installieren, sollten Sie einige Voraussetzungen überprüfe
             traefik-compress:
               compress: {}
 
+            # Traefik basic auth
+            traefik-basic-auth:
+              basicAuth:
+                # users:
+                #   - "user:$apsdfswWvC/6.$E3FtsfTntPC0wVJ7IUVtX1"
+                usersFile: "/run/secrets/basic_auth_credentials"
+                realm: "Traefik 3 Basic Auth"
+
             # # Use with traefik.http.routers.myRouter.middlewares: "secured@file"
             secured:
               chain:
