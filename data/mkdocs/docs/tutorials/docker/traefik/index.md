@@ -287,6 +287,12 @@ Bevor Sie `Traefik` installieren, sollten Sie einige Voraussetzungen überprüfe
                 #- crowdsec-bouncer@file
             http3:
               advertisedPort: 443
+            forwardedHeaders:
+              # Allow these IPs to set the X-Forwarded-* headers
+              trustedIPs:
+                - "10.0.0.0/8"
+                - "192.168.0.0/16"
+                - "172.0.0.0/12"
 
         # Ping
         # ---
