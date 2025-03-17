@@ -70,6 +70,9 @@ Bevor Sie `Traefik` installieren, sollten Sie einige Voraussetzungen überprüfe
         ----
         user1:$$apr1$$ht6O3iSE$$5YxApoPCqeGyMNRsCvXwh/
         ----
+
+        # You can also create the password credentials with the help of "HTPasswd Generator"
+        URL: https://www.web2generators.com/apache-tools/htpasswd-generator
         ```
     === "Download config files"
         ```bash
