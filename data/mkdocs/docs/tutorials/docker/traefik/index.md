@@ -482,9 +482,11 @@ Bevor Sie `Traefik` installieren, sollten Sie einige Voraussetzungen überprüfe
 
 !!! info "Einige Tipps"
 
-     - show secret file
-
-     docker compose exec traefik ls -la /var/run/secrets/
+    - show secret file
+    
+    ```bash 
+    docker compose exec traefik ls -la /var/run/secrets/
+    ```
 
 #### Seite aufrufen
 
