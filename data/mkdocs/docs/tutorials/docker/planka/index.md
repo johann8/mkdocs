@@ -6,7 +6,7 @@ Date:    März 17, 2025
 tags: [Docker, planka, project, board]
 ---
 
-# <img src="../../../assets/logos/olanka.png" width="28" height="26" /> Planka
+# <img src="../../../assets/logos/planka.png" width="28" height="26" /> Planka
 
 !!! question "What is Planka?"
 
@@ -18,7 +18,7 @@ tags: [Docker, planka, project, board]
 
 !!! note "Allgemeine Information über Planka"
 
-    Am einfachsten lässt sich `Planka` as Docker Container installieren. Es gibt ein [`offizielles Planka Docker Image`][offizielles Planka Docker Image]{target=\_blank}[^2]. Es gibt auch eine [`Planka Live-Demo`][Planka Live-Demo]{target=\_blank}. Der `Source Code von Planka` findet man auf [`Planka GitHub`][Planka GitHub]{target=\_blank}[^3]. [`Planka Docs`][Planka Docs]{target=\_blank} ist sehr hilfreich für die Installation und Konfiguration der APP. Es gibt auch eine [`Planka Live-Demo`][Planka Live-Demo]{target=\_blank}.
+    Am einfachsten lässt sich `Planka` as Docker Container installieren. Es gibt ein [`offizielles Planka Docker Image`][offizielles Planka Docker Image]{target=\_blank}[^2]. Es gibt auch eine [`Planka Live-Demo`][Planka Live-Demo]{target=\_blank}. Den `Source Code von Planka` findet man auf [`Planka GitHub`][Planka GitHub]{target=\_blank}[^3]. [`Planka Docs`][Planka Docs]{target=\_blank} ist sehr hilfreich für die Installation und Konfiguration der APP.
 
     [Planka GitHub]: https://github.com/plankanban/planka
     [offizielles Planka Docker Image]: https://github.com/plankanban/planka
