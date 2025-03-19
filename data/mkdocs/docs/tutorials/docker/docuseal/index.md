@@ -10,7 +10,7 @@ tags: [Docker, docuseal, sign]
 
 !!! question "What is DocuSeal?"
 
-    :material-trello: [`DocuSeal`][DocuSeal]{target=\_blank}[^1] is a open source platform that provides secure and efficient digital document signing and processing.
+    :material-sign-text: [`DocuSeal`][DocuSeal]{target=\_blank}[^1] is a open source platform that provides secure and efficient digital document signing and processing.
 
     [DocuSeal]: https://www.docuseal.com/
 
@@ -24,6 +24,7 @@ tags: [Docker, docuseal, sign]
     [offizielles DocuSeal Docker Image]: https://hub.docker.com/r/docuseal/docuseal
     [DocuSeal Live-Demo]: https://demo.docuseal.tech/
     [DocuSeal Docs]: https://www.docuseal.com/docs
+
 
 #### Install DocuSeal als `docker container`
 
@@ -188,3 +189,6 @@ tags: [Docker, docuseal, sign]
     systemctl status monit
 
     ```
+[^1]: :material-sign-text: [DocuSeal Homepage](https://www.docuseal.com/){target=\_blank}
+[^2]: :material-docker: [Docker Hub](https://hub.docker.com/r/docuseal/docuseal){target=\_blank}
+[^3]: :material-github: [Github - Planka](https://github.com/docusealco/docuseal){target=\_blank}
