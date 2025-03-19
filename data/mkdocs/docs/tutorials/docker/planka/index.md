@@ -198,4 +198,6 @@ tags: [Docker, planka, project, board]
     systemctl status monit
 
     ```
-
+[^1]: :material-trello: [Planka APP](https://planka.app/){target=\_blank}
+[^2]: :material-docker: [Docker Hub](https://github.com/plankanban/planka){target=\_blank}
+[^3]: :material-github: [Github - Planka](https://github.com/plankanban/planka){target=\_blank}
